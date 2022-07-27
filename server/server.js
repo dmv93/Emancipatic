@@ -1,10 +1,8 @@
-const express =require("express")
+const express = require("express")
 const app = express()
-const router =require("./routes/routes")
-
-const port =  5050
 app.use(express.json())
+const router = require("./routes/routes")
 app.use("/",router)
-
+const port =  5050
 app.listen(port , console.log("Sevidor escuchando en puerto "+ port))
 
