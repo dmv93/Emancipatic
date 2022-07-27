@@ -10,8 +10,8 @@ const Home = () => {
                 <h3 id="h3_home">¿Qué eres?</h3>
             </div>
             <div className="botones_home">
-                <Link to={"/"}><input type={"button"} className="button_home_alumno" value={"Alumno"} /></Link>
-                <Link to={"/"}><input type={"button"} className="button_home_formado" value={"Formador"} /></Link>
+                <Link to={"/accesoAlumno"}><input type={"button"} className="button_home_alumno" value={"Alumno"} /></Link>
+                <Link to={"/accesoFormador"}><input type={"button"} className="button_home_formado" value={"Formador"} /></Link>
             </div>   
         </div>
     )
