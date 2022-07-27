@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
+
+@media screen and (max-width: 391px) {
+    .form_rf {
+        display: flex;
+
+        width: 100% !important;
+
+
+
+        background-color: aquamarine;
+    }
+
+    .contenido{
+        margin-left: 35% !important;
+    }
+    .contenidoB{
+        margin-left: 10%;
+    }
+}
+
+#h1_rf {
+
+    font-family: 'Baloo Paaji 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 70px;
+    letter-spacing: 0.04em;
+
+    color: #1F3262;
+}
+
+#input_rf_nombre,
+#input_rf_apellidos,
+#input_rf_email,
+#input_rf_telefono,
+#input_rf_dni,
+#input_rf_codpostal,
+#input_rf_poblacion,
+#input_rf_provincia {
+    box-sizing: border-box;
+
+
+
+    border: 1px solid #B5B5B5;
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+
+    font-family: 'Baloo Paaji';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+
+    color: #1F3262;
+}
+
+label {
+    font-family: 'Baloo Paaji 2';
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #1F3262;
+}
+
+.form_rf {
+    display: flex;
+
+    width: 40%;
+
+    flex-wrap: wrap;
+}
+
+#boton_rf_enviar {
+    background: #4A4D9B;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    font-family: 'Baloo Paaji 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+
+    width: 100%;
+
+    color: #FFFFFF;
+}
+
+.contenido {
+    display: block;
+    position: relative;
+    width: calc(90%);
+    height: auto;
+    margin: 10px auto;
+    padding: 30px 10px 10px;
+
+}
+
+form .contenido input {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+form .contenido label {
+    display: block;
+    position: absolute;
+    width: auto;
+    top: 0px;
+    left: 5px;
+
+    padding: 5px 5px;
+    border-radius: 20px;
+
+}
