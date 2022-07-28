@@ -1,0 +1,15 @@
+@media screen and (max-width: 391px) {
+    .form_ra {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario_ra {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+}

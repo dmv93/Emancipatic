@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 
 const Login = () => {
@@ -27,7 +29,8 @@ const Login = () => {
                     <label htmlFor="" id="label_login_privacidad"></label>
                     <input type={"checkbox"} id="input_login_privacidad" name="privacidad" placeholder="" onChange={(e) => { setPrivacidad(e.target.value) }} />He leido y acepto la política de privacidad
 
-                    <input type={"button"} className="button_login_enviar" value={"ENVIAR"} />
+                    <Link to={"/"} ><input type={"button"} className="button_login_enviar" value={"ENVIAR"} /></Link>
+
                 </form>
             </div>
         </div>
