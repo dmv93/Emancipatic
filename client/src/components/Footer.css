@@ -10,6 +10,8 @@ html {
   }
 @media screen and (min-width: 1200px) {
     .footer1 {
+        position: absolute;
+        bottom: 45px;
         margin-top: 10px;
         padding: 2%;
         width: 100%;
@@ -65,6 +67,8 @@ html {
     }
 
     .footer2 {
+        position: absolute;
+        bottom: 0;
         padding: 2%;
         width: 100%;
         display: flex;
@@ -86,16 +90,18 @@ html {
 
 @media screen and (max-width: 420px) {
     .footer1 {
-        margin-top: 120px;
+        position: absolute;
+        bottom: 20px;
         padding: 2%;
         width: 100%;
         display: flex;
-        flex-direction: column;
-        margin-top: 512px;
+        flex-direction: row;
     }
 
     .logo {
         width: 25%;
+        display: flex;
+        flex-direction: row;
     }
 
     .logoimg {
@@ -106,6 +112,7 @@ html {
         width: 25%;
         display: flex;
         flex-direction: row;
+        display: none;
     }
 
     .color_h1 {
@@ -123,6 +130,7 @@ html {
     .siguenos {
         width: 25%;
         display: flex;
+        margin-left: 60px;
         flex-direction: row;
     }
 
@@ -134,6 +142,11 @@ html {
         width: 25%;
         display: flex;
         flex-direction: row;
+        display: none;
+    }
+
+    #siguenos{
+        display: none;
     }
 
     .boton_colaborar {
@@ -151,6 +164,8 @@ html {
     }
 
     .footer2 {
+        position: absolute;
+        bottom: 0;
         padding: 2%;
         width: 100%;
         display: flex;
