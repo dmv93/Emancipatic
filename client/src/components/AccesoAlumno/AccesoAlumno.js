@@ -11,7 +11,7 @@ const AccesoAlumno = () => {
             </div>
             <div className="botones_home">
                 <Link to={"/"}><input type={"button"} className="button_accesoAlumno_logIn" value={"Iniciar sesión"} /></Link>
-                <Link to={"/"}><input type={"button"} className="button_accesoAlumno_registro" value={"Registrarse"} /></Link>
+                <Link to={"/registroAlumno"}><input type={"button"} className="button_accesoAlumno_registro" value={"Registrarse"} /></Link>
             </div>   
         </div>
     )

@@ -14,13 +14,24 @@ const RegistroAlumno = () => {
     const [poblacion, setPoblacion] = useState("");
     const [provincia, setProvincia] = useState("");
 
-    const sendData = () => {
+    const sendDataAlumno = () => {
 
+        const requestOptions = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nombre:nombre,apellidos:apellidos,email:email,telefono:telefono,dni:dni,codpostal:codpostal,poblacion:poblacion,provincia:provincia }),
+        };
 
+        fetch("registroAlumno",requestOptions)
+            .then((response) => response.json())
+
+            .then((res) => {
+                console.log(res.message)
+            })
     }
 
 
-    return(
+    return (
         <div>
             <h1 id="h1_ra">REGISTRO ALUMNO</h1>
             <div className="form_ra">
@@ -52,7 +63,7 @@ const RegistroAlumno = () => {
                     <input type={"checkbox"} id="input_ra_check"></input>
                     <label htmlFor="" id="label_ra_check">He leído y acepto la Política de Provacidad</label>
 
-                    <input type={"button"} className="button_ra_enviar" value={"ENVIAR"} />
+                    <input type={"button"} className="button_ra_enviar" onClick={() => sendDataAlumno()} value={"ENVIAR"} />
                 </form>
             </div>
         </div>
