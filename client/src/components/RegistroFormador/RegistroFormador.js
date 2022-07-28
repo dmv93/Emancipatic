@@ -31,12 +31,6 @@ function RegistroFormador(props) {
 
 
         <div >
-
-
-
-
-
-
             <form className="form_rf">
                 <h3 id="h1_rf">REGISTRO FORMADOR</h3>
                 <div id="impar">
@@ -85,13 +79,6 @@ function RegistroFormador(props) {
                     <button id="boton_rf_enviar" onClick={() => sendData()} >ENVIAR</button>
                 </div>
             </form>
-
-
-
-
-
-
-
         </div>
     )
 }
