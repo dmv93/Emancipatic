@@ -20,7 +20,7 @@ function Footer() {
                     <p id="color_correo">info@emancipatic.org</p>
                 </div>
                 <div className="siguenos">
-                    <h1 className="color_h1">SÍGUENOS</h1>
+                    <h1 className="color_h1" id="siguenos">SÍGUENOS</h1>
                     <img className="imgicono" src={face} alt="facebook" />
                     <img className="imgicono" src={linke} alt="linkedin" />
                     <img className="imgicono" src={twit} alt="twitter" />
