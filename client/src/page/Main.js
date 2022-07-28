@@ -6,8 +6,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Home from "../components/Home/Home";
 import RegistroAlumno from "../components/RegistroAlumno/RegistroAlumno";
-import AccesoAlumno from "../components/AccesoAlumno/AccesoAlumno"
-import AccesoFormador from "../components/AccesoFormador/AccesoFormador"
+import Login from "../components/Login/Login"
+import AccesoAlumno from "../components/AccesoAlumno/AccesoAlumno";
+import AccesoFormador from "../components/AccesoFormador/AccesoFormador";
 
 class Main extends Component {
     render() {
@@ -18,6 +19,7 @@ class Main extends Component {
                     <Route path="/" element={<Home />} />
                     <Route path="registro" element={<RegistroFormador />} />
                     <Route path="/registroAlumno" element={<RegistroAlumno />} />
+                    <Route path="/login" element={<Login />} />
                     <Route path="/accesoAlumno" element={<AccesoAlumno />} />
                     <Route path="/accesoFormador" element={<AccesoFormador />} />
                 </Routes>

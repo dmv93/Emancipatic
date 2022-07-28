@@ -6,12 +6,12 @@ const AccesoAlumno = () => {
 
     return(
         <div>
-            <div className="home">
-                <h3 id="h3_home">Bienvenido Alumno</h3>
+            <div className="accesoAlumno">
+                <h3 id="h3_AccesoAlumno">Bienvenido Alumno</h3>
             </div>
-            <div className="botones_home">
-                <Link to={"/"}><input type={"button"} className="button_accesoAlumno_logIn" value={"Iniciar sesión"} /></Link>
-                <Link to={"/registroAlumno"}><input type={"button"} className="button_accesoAlumno_registro" value={"Registrarse"} /></Link>
+            <div className="botones_AccesoAlumno">
+                <Link to={"/login"}  style={{ textDecoration: 'none' }}><input type={"button"} className="button_accesoAlumno_logIn" value={"Iniciar sesión"} /></Link>
+                <Link to={"/registroAlumno"}  style={{ textDecoration: 'none' }}><input type={"button"} className="button_accesoAlumno_registro" value={"Registrarse"} /></Link>
             </div>   
         </div>
     )

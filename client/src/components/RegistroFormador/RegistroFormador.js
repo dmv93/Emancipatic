@@ -42,13 +42,9 @@ function RegistroFormador(props) {
 
 
         <div >
-
-
             <div id="caja">
                 <form className="form_rf">
                     <h3 id="h1_rf">REGISTRO FORMADOR</h3>
-
-
                     <div className="contenido">
                         <label id="label_rf_nombre">Nombre*</label>
                         <input id="input_rf_nombre" onChange={(e) => setNombre(e.target.value)} ></input>
@@ -73,9 +69,6 @@ function RegistroFormador(props) {
                         <label id="label_rf_provincia">Provincia</label>
                         <input id="input_rf_provincia" onChange={(e) => setProvincia(e.target.value)} ></input>
                     </div>
-
-
-
                     <div className="contenidoB">
                         <input id="input_rf_check" type="checkbox" ></input>
                         <label id="label_rf_check">He leido y acepto la Política de Privacidad</label>
@@ -85,17 +78,6 @@ function RegistroFormador(props) {
                     </div>
                 </form>
             </div>
-
-
-
-
-
-
-
-
-
-
-
         </div>
     )
 }

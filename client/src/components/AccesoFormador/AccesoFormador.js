@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 
 const AccesoFormador = () => {
 
-    return(
+    return (
         <div>
             <div className="home">
                 <h3 id="h3_home">Bienvenido Formador</h3>
             </div>
-            <br/>
-            <br/>
-            <div className="botones_home">
-                <Link to={"/"}><input type={"button"} className="button_accesoFormador_logIn" value={"Iniciar sesión"} /></Link>
-                <br/>
-                <Link to={"/registro"}><input type={"button"} className="button_accesoFormador_registro" value={"Registrarse"} /></Link>
-            </div>   
+            <br />
+            <br />
+            <div className="botones_AccesoFormador">
+                <Link to={"/login"} style={{ textDecoration: 'none' }}><input type={"button"} className="button_accesoFormador_logIn" value={"Iniciar sesión"} /></Link>
+                <br />
+                <Link to={"/registro"} style={{ textDecoration: 'none' }}><input type={"button"} className="button_accesoFormador_registro" value={"Registrarse"} /></Link>
+            </div>
         </div>
     )
 }
