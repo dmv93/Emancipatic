@@ -1,14 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
 
 @media screen and (max-width: 391px) {
     .form_rf {
         display: flex;
-
         width: 100% !important;
-
         margin: 0% !important;
-
-
     }
 
     #caja{
@@ -130,19 +125,13 @@
 
 .form_rf {
     display: flex;
-
     width: 40%;
-
     flex-wrap: wrap;
-
-    
-
     background-color: white;
     background-color: rgb(255, 255, 255);
     margin-left: 10%;
     margin-top: 2%;
     border-radius: 8px;
-
     box-shadow: 0 10px 25px rgb(82 105 112);
 }
 #caja{

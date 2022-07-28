@@ -10,8 +10,8 @@ const AccesoAlumno = () => {
                 <h3 id="h3_AccesoAlumno">Bienvenido Alumno</h3>
             </div>
             <div className="botones_AccesoAlumno">
-                <Link to={"/"}><input type={"button"} className="button_accesoAlumno_logIn" value={"Iniciar sesión"} /></Link>
-                <Link to={"/registroAlumno"}><input type={"button"} className="button_accesoAlumno_registro" value={"Registrarse"} /></Link>
+                <Link to={"/login"}  style={{ textDecoration: 'none' }}><input type={"button"} className="button_accesoAlumno_logIn" value={"Iniciar sesión"} /></Link>
+                <Link to={"/registroAlumno"}  style={{ textDecoration: 'none' }}><input type={"button"} className="button_accesoAlumno_registro" value={"Registrarse"} /></Link>
             </div>   
         </div>
     )
