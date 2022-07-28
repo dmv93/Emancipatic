@@ -6,10 +6,10 @@ const AccesoFormador = () => {
 
     return(
         <div>
-            <div className="home">
-                <h3 id="h3_home">Bienvenido Formador</h3>
+            <div className="accesoFormador">
+                <h3 id="h3_AccesoFormador">Bienvenido Formador</h3>
             </div>
-            <div className="botones_home">
+            <div className="botones_AccesoFormador">
                 <Link to={"/"}><input type={"button"} className="button_accesoFormador_logIn" value={"Iniciar sesión"} /></Link>
                 <Link to={"/"}><input type={"button"} className="button_accesoFormador_registro" value={"Registrarse"} /></Link>
             </div>   

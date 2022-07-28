@@ -64,8 +64,6 @@ html {
     }
 
     .footer2 {
-        position: absolute;
-        bottom: 0;
         padding: 2%;
         width: 100%;
         display: flex;
@@ -150,8 +148,6 @@ html {
     }
 
     .footer2 {
-        position: absolute;
-        bottom: 0;
         padding: 2%;
         width: 100%;
         display: flex;
