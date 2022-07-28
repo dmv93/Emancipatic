@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&family=Cormorant+SC:wght@300;400;500;600;700&display=swap');
+
+@media screen and (max-width: 420px) {
+    .form_login{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 5%;
+    }
+
+    .button_login_enviar{
+
+        background: #4A4D9B;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        border-style: none;
+        font-family: 'Baloo Paaji 2';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 26px;
+        letter-spacing: 0.04em;    
+        color: #FFFFFF;
+    }
+
+
+    #input_login_telefono{
+        height: 2.5em;
+        width: 100%;
+    }
+    
+    #input_login_privacidad{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    
+    #input_login_password{
+        height: 2.5em;
+        width: 100%
+    }
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+
+.form_login{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 5%;
+}
+.button_login_enviar{
+    margin-top: 1%;
+    background: #4A4D9B;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-family: 'Baloo Paaji 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    border-style: none;
+    width: 100%;
+}
+
+#input_login_telefono{
+    height: 5em;
+    width: 100%;
+}
+
+#input_login_privacidad{
+    margin-top: 1%;
+}
+
+#input_login_password{
+    height: 5em;
+    width: 100%
+}
+
+}

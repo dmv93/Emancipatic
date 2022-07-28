@@ -7,6 +7,7 @@ import Main from './page/Main'
 import './components/RegistroFormador/RegistroFormador.css';
 import './components/Home/home.css';
 import './components/Footer.css'
+import './components/Login/Login.css'
 
 function App() {
   return (
