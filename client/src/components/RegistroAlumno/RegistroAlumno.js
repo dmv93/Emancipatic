@@ -14,9 +14,20 @@ const RegistroAlumno = () => {
     const [poblacion, setPoblacion] = useState("");
     const [provincia, setProvincia] = useState("");
 
-    const sendData = () => {
+    const sendDataAlumno = () => {
 
+        const requestOptions = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nombre:nombre,apellidos:apellidos,email:email,telefono:telefono,dni:dni,codpostal:codpostal,poblacion:poblacion,provincia:provincia }),
+        };
 
+        fetch("registroAlumno",requestOptions)
+            .then((response) => response.json())
+
+            .then((res) => {
+                console.log(res.message)
+            })
     }
 
 
@@ -57,9 +68,9 @@ const RegistroAlumno = () => {
                     <label htmlFor="" id="label_ra_check">He leído y acepto la Política de Provacidad</label>
                 </div>
                 <div id="sexto_ra">
-                    <input type={"button"} className="button_ra_enviar" value={"ENVIAR"} />
+                    <input type={"button"} className="button_ra_enviar" onClick={() => sendDataAlumno()} value={"ENVIAR"} />
                 </div>
-            </form>
+                </form>
         </div>
     )
 }
