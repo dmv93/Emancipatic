@@ -9,9 +9,12 @@ const AccesoFormador = () => {
             <div className="home">
                 <h3 id="h3_home">Bienvenido Formador</h3>
             </div>
+            <br/>
+            <br/>
             <div className="botones_home">
                 <Link to={"/"}><input type={"button"} className="button_accesoFormador_logIn" value={"Iniciar sesión"} /></Link>
-                <Link to={"/"}><input type={"button"} className="button_accesoFormador_registro" value={"Registrarse"} /></Link>
+                <br/>
+                <Link to={"/registro"}><input type={"button"} className="button_accesoFormador_registro" value={"Registrarse"} /></Link>
             </div>   
         </div>
     )
