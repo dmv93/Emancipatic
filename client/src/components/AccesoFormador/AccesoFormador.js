@@ -18,6 +18,7 @@ const AccesoFormador = () => {
                 <Link to={"/"}><input type={"button"} className="button_accesoFormador_logIn" value={"Iniciar sesión"} /></Link>
                 <br/>
                 <Link to={"/registro"}><input type={"button"} className="button_accesoFormador_registro" value={"Registrarse"} /></Link>
+            </div>
             </div>   
         </div>
     )
