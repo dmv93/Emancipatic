@@ -69,6 +69,7 @@ const RegistroAlumno = () => {
                 </div>
                 <div id="sexto_ra">
                     <input type={"button"} className="button_ra_enviar" onClick={() => sendDataAlumno()} value={"ENVIAR"} />
+                    <br/>
                 </div>
                 </form>
         </div>
