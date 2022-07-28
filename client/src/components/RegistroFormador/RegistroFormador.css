@@ -6,16 +6,30 @@
 
         width: 100% !important;
 
+        margin: 0% !important;
 
-
-        background-color: aquamarine;
+        
     }
 
-    .contenido{
+    .contenido {
         margin-left: 35% !important;
     }
-    .contenidoB{
+
+    .contenidoB {
         margin-left: 10%;
+    }
+
+    #h1_rf {
+
+        margin-left: 20% !important;
+        font-family: 'Baloo Paaji 2';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 70px;
+        letter-spacing: 0.04em;
+        margin-left: 3%;
+        color: #1F3262;
     }
 }
 
@@ -27,8 +41,12 @@
     font-size: 40px;
     line-height: 70px;
     letter-spacing: 0.04em;
-
+    margin-left: 3%;
     color: #1F3262;
+}
+
+.contenidoB {
+    margin: 3%;
 }
 
 #input_rf_nombre,
@@ -74,6 +92,16 @@ label {
     width: 40%;
 
     flex-wrap: wrap;
+
+
+
+    background-color: white;
+    background-color: rgb(255, 255, 255);
+    margin-left: 10%;
+    margin-top: 2%;
+    border-radius: 8px;
+
+    box-shadow: 0 10px 25px rgb(82 105 112);
 }
 
 #boton_rf_enviar {
