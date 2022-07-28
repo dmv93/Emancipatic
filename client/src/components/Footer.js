@@ -10,7 +10,7 @@ import yout from '../assets/youtube.png'
 
 function Footer() {
     return (
-        <div>
+        <div className="Footer">
             <div className="footer1">
                 <div className="logo">
                     <img className="logoimg" src={eman} alt="logo" />

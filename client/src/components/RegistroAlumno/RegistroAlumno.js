@@ -22,9 +22,10 @@ const RegistroAlumno = () => {
 
     return(
         <div>
-            <h1 id="h1_ra">REGISTRO ALUMNO</h1>
+            <h2 id="h2_ra">REGISTRO ALUMNO</h2>
             <div className="form_ra">
                 <form className="formulario_ra">
+                    
                     <label htmlFor="" id="label_ra_nombre">Nombre</label>
                     <input type={"text"} id="input_ra_nombre" name="nombre" placeholder="" onChange={(e) => { setNombre(e.target.value) }} />
 
