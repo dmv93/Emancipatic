@@ -1,6 +1,7 @@
 html {
     font-size: 85%;
     box-sizing: border-box;
+    height: 100%;
   }
   *,
   *:before,
@@ -89,13 +90,15 @@ html {
 
 
 @media screen and (max-width: 420px) {
+
+    .Footer {
+        height: 100px;
+    } 
     .footer1 {
-        position: absolute;
-        bottom: 20px;
-        padding: 2%;
         width: 100%;
         display: flex;
         flex-direction: row;
+        position: relative;
     }
 
     .logo {
@@ -164,15 +167,10 @@ html {
     }
 
     .footer2 {
-        position: absolute;
-        bottom: 0;
-        padding: 2%;
         width: 100%;
         display: flex;
-        flex-direction: nowrap;
         background: rgb(74, 77, 155);
         background: linear-gradient(90deg, rgba(74, 77, 155, 1) 0%, rgba(88, 124, 187, 1) 30%, rgba(118, 223, 255, 1) 54%, rgba(0, 212, 255, 1) 100%);
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
