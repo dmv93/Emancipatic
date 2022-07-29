@@ -40,6 +40,7 @@ const user = {
             });
         });
     },
+    
     registroFormador: (req, res) => {
         console.log(req.body)
         MongoClient.connect(url, function (err, db) {
@@ -71,9 +72,60 @@ const user = {
             });
         });
     },
-
-
     
+    login: (req, res) => {
+        console.log(req.body)
+        MongoClient.connect(url, function (err, db) {
+            if (err) throw err
+            var dbo = db.db(mydb);
+
+            const myobj = {"telefono": req.body.telefono, "dni": req.body.password}
+
+            // dbo.collection("Formadores").findOne(myobj, async function (err, result) {
+            //     if (err) throw err
+            //     console.log("Usuario autenticado")
+            //     res.json({
+            //         data:result,
+            //         message: true
+            //     })
+            // });
+            dbo.collection("Alumnos").findOne(myobj, async function (err, result) {
+                if (err) throw err
+                console.log("Alumno autenticado")
+                res.json({
+                    data: result,
+                    message: true
+                })
+            });
+        })
+    },
+
+    loginFormador: (req,res) => {
+        console.log(req.body)
+        MongoClient.connect(url, function (err, db) {
+            if (err) throw err
+            var dbo = db.db(mydb);
+
+            const myobj = {"telefono": req.body.telefono, "dni": req.body.password}
+
+            dbo.collection("Formadores").findOne(myobj, async function (err, result) {
+                if (err) throw err
+                console.log("Usuario autenticado")
+                res.json({
+                    data:result,
+                    message: true
+                })
+            });
+            // dbo.collection("Alumnos").findOne(myobj, async function (err, result) {
+            //     if (err) throw err
+            //     console.log("Alumno autenticado")
+            //     res.json({
+            //         data: result,
+            //         message: true
+            //     })
+            // });
+        })
+    }   
 };
 
 module.exports = user;
