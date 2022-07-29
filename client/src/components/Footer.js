@@ -32,6 +32,7 @@ function Footer() {
                         <input type="button" className="socio" value="HAZTE SOCIO" />
                     </div>
                 </div>
+
             </div>
             <div className="footer2">
                 <div className="privacidad">
