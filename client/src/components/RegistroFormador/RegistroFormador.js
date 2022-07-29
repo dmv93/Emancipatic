@@ -48,33 +48,53 @@ function RegistroFormador(props) {
                     <div className="contenido">
                         <label id="label_rf_nombre">Nombre*</label>
                         <input id="input_rf_nombre" onChange={(e) => setNombre(e.target.value)} ></input>
+                    </div>
+
+                    <div className="contenido">
                         <label id="label_rf_apellidos">Apellidos</label>
                         <input id="input_rf_apellidos" onChange={(e) => setApellidos(e.target.value)} ></input>
                     </div>
+
                     <div className="contenido">
                         <label id="label_rf_email">Email*</label>
                         <input id="input_rf_email" onChange={(e) => setEmail(e.target.value)} ></input>
+                    </div>
+
+                    <div className="contenido">
                         <label id="label_rf_telefono">Teléfono Móvil*</label>
                         <input id="input_rf_telefono" onChange={(e) => setTelefono(e.target.value)} ></input>
                     </div>
+
                     <div className="contenido">
                         <label id="label_rf_dni">DNI*</label>
                         <input id="input_rf_dni" onChange={(e) => setDni(e.target.value)} ></input>
+                    </div>
+
+                    <div className="contenido">
                         <label id="label_rf_codpostal">Código Postal</label>
                         <input id="input_rf_codpostal" onChange={(e) => setCodpostal(e.target.value)} ></input>
                     </div>
+
                     <div className="contenido">
                         <label id="label_rf_poblacion">Población</label>
                         <input id="input_rf_poblacion" onChange={(e) => setPoblacion(e.target.value)} ></input>
+                    </div>
+
+                    <div className="contenido">
                         <label id="label_rf_provincia">Provincia</label>
                         <input id="input_rf_provincia" onChange={(e) => setProvincia(e.target.value)} ></input>
+                    </div>
+                    <div className="contenido">
+                        <label id="label_rf_poblacion">¿Qué temas puedes enseñar?</label>
+                        <input id="input_rf_poblacion" onChange={(e) => setPoblacion(e.target.value)} ></input>
                     </div>
                     <div className="contenidoB">
                         <input id="input_rf_check" type="checkbox" ></input>
                         <label id="label_rf_check">He leido y acepto la Política de Privacidad</label>
                         <br />
                         <br />
-                        <button id="boton_rf_enviar" onClick={() => sendDataFormador()} >ENVIAR</button>
+                        {nombre && apellidos && email && telefono && dni && codpostal && poblacion && provincia ? <button id="boton_rf_enviar" onClick={() => sendDataFormador()} >ENVIAR</button> : <button id="boton_rf_enviar" onClick={() => sendDataFormador()} disabled>ENVIAR</button>}
+
                     </div>
                 </form>
             </div>
