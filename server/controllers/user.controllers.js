@@ -10,6 +10,7 @@ const mydb = "Emancipatic";
 const user = {
     registroAlumno: (req, res) => {
         console.log(req.body)
+        
         MongoClient.connect(url, function (err, db) {
             if (err) throw err;
             var dbo = db.db(mydb);
@@ -70,6 +71,7 @@ const user = {
             });
         });
     },
+
 
     
 };
