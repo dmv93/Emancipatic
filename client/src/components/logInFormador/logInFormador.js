@@ -24,7 +24,7 @@ const Login = () => {
             })
         }
 
-        fetch("login",info)
+        fetch("loginFormador",info)
             .then((response) => response.json())
             .then((res) => {
                 if(res) {

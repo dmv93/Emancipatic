@@ -66,10 +66,10 @@ const RegistroAlumno = () => {
                 <div id="quinto_ra">
                     <input type={"checkbox"} id="input_ra_check"></input>
                     <label htmlFor="" id="label_ra_check">He leído y acepto la Política de Provacidad</label>
-                </div>
-                <div id="sexto_ra">
-                    <input type={"button"} className="button_ra_enviar" onClick={() => sendDataAlumno()} value={"ENVIAR"} />
                     <br/>
+                    <br/>
+                    {nombre && apellidos && email && telefono && dni && codpostal && poblacion && provincia ? <button id="boton_ra_enviar" onClick={() => sendDataAlumno()} >ENVIAR</button> : <button id="boton_ra_enviar" onClick={() => sendDataAlumno()} disabled>ENVIAR</button>}
+                    
                 </div>
                 </form>
         </div>

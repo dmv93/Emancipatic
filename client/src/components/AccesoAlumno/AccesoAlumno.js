@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const AccesoAlumno = () => {
 
     return(
-        <div>
+        <div className="padre_aa">
             <div className="accesoAlumno">
                 <h3 id="h3_AccesoAlumno">Bienvenido Alumno</h3>
             </div>

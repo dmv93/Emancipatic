@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
 
     return(
-        <div>
+        <div className="padre_ho">
             <div className="home">
                 <h3 id="h3_home">¿Qué eres?</h3>
             </div>

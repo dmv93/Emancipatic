@@ -9,6 +9,7 @@ import RegistroAlumno from "../components/RegistroAlumno/RegistroAlumno";
 import Login from "../components/Login/Login"
 import AccesoAlumno from "../components/AccesoAlumno/AccesoAlumno";
 import AccesoFormador from "../components/AccesoFormador/AccesoFormador";
+import LoginFormador from "../components/logInFormador/logInFormador"
 
 class Main extends Component {
     render() {
@@ -22,6 +23,7 @@ class Main extends Component {
                     <Route path="/login" element={<Login />} />
                     <Route path="/accesoAlumno" element={<AccesoAlumno />} />
                     <Route path="/accesoFormador" element={<AccesoFormador />} />
+                    <Route path="/loginFormador" element={<LoginFormador />} />
                 </Routes>
                 <Footer />
             </div>

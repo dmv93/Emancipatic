@@ -1,0 +1,145 @@
+
+@media screen and (max-width: 420px) {
+
+    #h3_login{
+        position: absolute;
+        width: 450px;
+        height: 75px;
+        left: 20%;
+        top: 150px;
+        font-family: 'Baloo Paaji 2';
+        font-size: 50px;
+        line-height: 35px;
+        letter-spacing: 0.04em;
+        color: #1F3262;
+    }
+    
+        .form_login{
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+            margin-top: 220px;
+            flex-direction: column;
+            text-decoration: none;
+            padding: 10%;
+        }
+    
+        .button_login_enviar{
+            margin-top: 1em;
+            width: 290px;
+            height: 60px;
+            background: #4A4D9B;
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            border-style: none;
+            font-family: 'Baloo Paaji 2';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 26px;
+            letter-spacing: 0.04em;    
+            color: #FFFFFF;
+            width: 100%;
+            font-family: 'Baloo Paaji 2', cursive;
+        }
+    
+    
+        #input_login_telefono{
+            height: 2.5em;
+            width: 100%;
+            font-family: 'Baloo Paaji 2', cursive;
+            border-radius: 5px;
+            margin-top: 1em;
+            height: 60px;
+        }
+        
+        #input_login_privacidad{
+            margin-top: 5%;
+            margin-bottom: 5%;
+            font-family: 'Baloo Paaji 2', cursive;
+        }
+        
+        #input_login_password{
+            height: 2.5em;
+            width: 100%;
+            font-family: 'Baloo Paaji 2', cursive;
+            border-radius: 5px;
+            margin-top: 1em;
+            height: 60px;
+        }
+    }
+    
+    
+    
+    
+    @media screen and (min-width: 1200px) {
+    
+        #h3_login{
+            position: absolute;
+            width: 450px;
+            height: 75px;
+            left: 20%;
+            top: 150px;
+            font-family: 'Baloo Paaji 2';
+            font-size: 50px;
+            line-height: 35px;
+            letter-spacing: 0.04em;
+            color: #1F3262;
+        }
+    
+    .form_login{
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        margin-top: 250px;
+        flex-direction: column;
+        text-decoration: none;
+    }
+    
+    
+    .button_login_enviar{
+        margin-top: 1em;
+        width: 290px;
+        height: 60px;
+        background: #4A4D9B;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        font-family: 'Baloo Paaji 2';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: #FFFFFF;
+        border-style: none;
+        width: 100%;
+        font-family: 'Baloo Paaji 2', cursive;
+    }
+    
+    #input_login_telefono{
+        height: 5em;
+        width: 100%;
+        font-family: 'Baloo Paaji 2', cursive;
+        border-radius: 5px;
+        margin-top: 1em;
+        height: 60px;
+    
+    }
+    
+    #input_login_privacidad{
+        margin-top: 1%;
+        font-family: 'Baloo Paaji 2', cursive;
+    }
+    
+    #input_login_password{
+        height: 5em;
+        width: 100%;
+        font-family: 'Baloo Paaji 2', cursive;
+        border-radius: 5px;
+        margin-top: 1em;
+        height: 60px;
+    
+    }
+    
+    }
+    

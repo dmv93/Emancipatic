@@ -1,77 +1,153 @@
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 420px) {
     .formulario_ra {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    #h2_ra {
+        font-family: 'Baloo Paaji 2';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 70px;
+        letter-spacing: 0.02em;
+        margin-left: 3%;
+        color: #1F3262;
+    }
+
     #primera_ra {
         display: flex;
         flex-direction: column;
+        margin-bottom: 1em;
     }
 
-    #label_ra_nombre {}
+    #label_ra_nombre {
+        font-family: 'Baloo Paaji 2';
+        font-style: normal;
+        font-weight: bold;
+        font-size: x-large;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: #1F3262;
+    }
 
     #input_ra_nombre {
         display: flex;
         width: 290px;
         height: 50px;
         top: 59px;
+        font-size: large;
     }
 
-    #label_ra_apellidos {}
+    #label_ra_apellidos {
+        margin-top: 1em;
+        font-family: 'Baloo Paaji 2';
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: x-large;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: #1F3262;
+    }
 
     #input_ra_apellidos {
         display: flex;
         width: 290px;
         height: 50px;
         top: 59px;
+        font-size: large;
     }
 
     #segundo_ra {
         display: flex;
         flex-direction: column;
+        margin-bottom: 1em;
     }
 
-    #label_ra_email {}
+    #label_ra_email {
+        font-family: 'Baloo Paaji 2';
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: x-large;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: #1F3262;
+    }
 
     #input_ra_email {
         display: flex;
         width: 290px;
         height: 50px;
         top: 59px;
+        font-size: large;
     }
 
-    #label_ra_telefono {}
+    #label_ra_telefono {
+        margin-top: 1em;
+        font-family: 'Baloo Paaji 2';
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: x-large;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: #1F3262;
+    }
 
     #input_ra_telefono {
         display: flex;
         width: 290px;
         height: 50px;
         top: 59px;
+        font-size: large;
     }
 
     #tercero_ra {
         display: flex;
         flex-direction: column;
+        margin-bottom: 1em;
     }
 
-    #label_ra_dni {}
+    #label_ra_dni {
+        font-family: 'Baloo Paaji 2';
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: x-large;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: #1F3262;
+    }
 
     #input_ra_dni {
         display: flex;
         width: 290px;
         height: 50px;
         top: 59px;
+        font-size: large;
     }
 
-    #label_ra_cp {}
+    #label_ra_cp {
+        margin-top: 1em;
+        font-family: 'Baloo Paaji 2';
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: x-large;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: #1F3262;
+    }
 
     #input_ra_cp {
         display: flex;
         width: 290px;
         height: 50px;
         top: 59px;
+        font-size: large;
     }
 
 
@@ -80,35 +156,60 @@
         flex-direction: column;
     }
 
-    #label_ra_poblacion {}
+    #label_ra_poblacion {
+        font-family: 'Baloo Paaji 2';
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: x-large;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: #1F3262;
+    }
 
     #input_ra_poblacion {
         display: flex;
         width: 290px;
         height: 50px;
         top: 59px;
+        font-size: large;
     }
 
-    #label_ra_provincia {}
+    #label_ra_provincia {
+        margin-top: 1em;
+        font-family: 'Baloo Paaji 2';
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: x-large;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: #1F3262;
+    }
 
     #input_ra_provincia {
         display: flex;
         width: 290px;
         height: 50px;
         top: 59px;
+        font-size: large;
     }
 
     #quinto_ra {
         display: flex;
         margin-top: 1em;
-    }
-
-    #sexto_ra {
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
-    .button_ra_enviar {
+    /* #sexto_ra {
+        display: flex;
+        justify-content: center;
+    } */
+
+
+    #boton_ra_enviar {
         margin-top: 1em;
         display: flex;
         width: 290px;
@@ -126,6 +227,22 @@
         color: #FFFFFF;
     }
 
+    #boton_ra_enviar:disabled{
+        background: grey;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+    
+        font-family: 'Baloo Paaji 2';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+    
+        width: 100%;
+    
+        color: #FFFFFF;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -164,7 +281,7 @@
 
     label {
         font-family: 'Baloo Paaji 2';
-    
+
         font-style: normal;
         font-weight: bold;
         font-size: 15px;
@@ -173,7 +290,7 @@
         color: #1F3262;
     }
 
-    .formulario_ra{
+    .formulario_ra {
         display: flex;
         width: 40%;
         flex-wrap: wrap;
@@ -195,6 +312,6 @@
         height: auto;
         margin: 10px auto;
         padding: 30px 10px 10px;
-    
+
     }
 }
