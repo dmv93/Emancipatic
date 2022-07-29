@@ -15,8 +15,79 @@ function RegistroFormador(props) {
     const [poblacion, setPoblacion] = useState("");
     const [provincia, setProvincia] = useState("");
 
+    const [whatsapp, setWhatsapp] = useState("");
+    const [cls1, setCls1] = useState("logoF");
 
+    const [instagram, setInstagram] = useState("");
+    const [cls2, setCls2] = useState("logoF");
 
+    const [twitter, setTwitter] = useState("");
+    const [cls3, setCls3] = useState("logoF");
+
+    const [facebook, setFacebook] = useState("");
+    const [cls4, setCls4] = useState("logoF");
+
+    const [youtube, setYoutube] = useState("");
+    const [cls5, setCls5] = useState("logoF");
+
+    const [googleMeet, setGoogleMeet] = useState("");
+    const [cls6, setCls6] = useState("logoF");
+    
+
+    const img1 = () => {
+        if (cls1 == "logoF") {
+            setCls1("logoC")
+            setWhatsapp("Whatsapp")
+        } else {
+            setCls1("logoF")
+            setWhatsapp("")
+        }
+    }
+    const img2 = () => {
+        if (cls2 == "logoF") {
+            setCls2("logoC")
+            setInstagram("Instagram")
+        } else {
+            setCls2("logoF")
+            setInstagram("")
+        }
+    }
+    const img3 = () => {
+        if (cls3 == "logoF") {
+            setCls3("logoC")
+            setTwitter("Twitter")
+        } else {
+            setCls3("logoF")
+            setTwitter("")
+        }
+    }
+    const img4 = () => {
+        if (cls4 == "logoF") {
+            setCls4("logoC")
+            setFacebook("Facebook")
+        } else {
+            setCls4("logoF")
+            setFacebook("")
+        }
+    }
+    const img5 = () => {
+        if (cls5 == "logoF") {
+            setCls5("logoC")
+            setYoutube("Youtube")
+        } else {
+            setCls5("logoF")
+            setYoutube("")
+        }
+    }
+    const img6 = () => {
+        if (cls6 == "logoF") {
+            setCls6("logoC")
+            setGoogleMeet("Google Meet")
+        } else {
+            setCls6("logoF")
+            setGoogleMeet("")
+        }
+    }
 
     const sendDataFormador = () => {
 
@@ -44,7 +115,7 @@ function RegistroFormador(props) {
         <div >
             <div id="caja">
                 <form className="form_rf">
-                    <h3 id="h1_rf">REGISTRO FORMADOR</h3>
+                    <h4 id="h1_rf">REGISTRO FORMADOR</h4>
                     <div className="contenido">
                         <label id="label_rf_nombre">Nombre*</label>
                         <input id="input_rf_nombre" onChange={(e) => setNombre(e.target.value)} ></input>
@@ -86,17 +157,33 @@ function RegistroFormador(props) {
                     </div>
                     <div className="contenido">
                         <label id="label_rf_poblacion">¿Qué temas puedes enseñar?</label>
-                        <input id="input_rf_poblacion" onChange={(e) => setPoblacion(e.target.value)} ></input>
+                        <input id="input_rf_poblacion" value={`${whatsapp} ${instagram} ${twitter} ${facebook} ${youtube} ${googleMeet}`}></input>
+
+
+                    </div>
+
+                    <div className="contenido">
+                        <img className={cls1} src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c543.png" onClick={() => img1()}></img>
+                        <img className={cls2} type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" onClick={() => img2()}></img>
+                    </div>
+                    <div className="contenido">
+                        <img className={cls3} type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/584px-Twitter-logo.svg.png" onClick={() => img3()}></img>
+                        <img className={cls4} type="image" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" onClick={() => img4()}></img>
+                    </div>
+                    <div className="contenido">
+                        <img className={cls5} type="image" src="https://logodownload.org/wp-content/uploads/2014/10/youtube-logo-5-2.png" onClick={() => img5()}></img>
+                        <img className={cls6} type="image" src="https://1000marcas.net/wp-content/uploads/2022/01/Google-Meet-Logo.png" onClick={() => img6()}></img>
                     </div>
                     <div className="contenidoB">
                         <input id="input_rf_check" type="checkbox" ></input>
-                        <label id="label_rf_check">He leido y acepto la Política de Privacidad</label>
+                        <label id="label_rf_check">He leido y acepto la <a>Política de Privacidad</a></label>
                         <br />
                         <br />
                         {nombre && apellidos && email && telefono && dni && codpostal && poblacion && provincia ? <button id="boton_rf_enviar" onClick={() => sendDataFormador()} >ENVIAR</button> : <button id="boton_rf_enviar" onClick={() => sendDataFormador()} disabled>ENVIAR</button>}
 
                     </div>
                 </form>
+
             </div>
         </div>
     )

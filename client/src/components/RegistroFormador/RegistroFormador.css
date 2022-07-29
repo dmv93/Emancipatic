@@ -16,7 +16,7 @@
     }
 
     .contenido {
-        margin-left: 0% !important;
+        margin-left: 3% !important;
     }
 
     .contenidoB {
@@ -32,7 +32,7 @@
         font-size: 40px;
         line-height: 70px;
         letter-spacing: 0.04em;
-        margin-left: 20% !important;
+      
         color: #1F3262;
     }
 }
@@ -42,13 +42,15 @@
     font-family: 'Baloo Paaji 2';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 35px;
     line-height: 70px;
-    letter-spacing: 0.04em;
-    margin-left: 17%;
+    letter-spacing: 0.02em;
+    margin-left: 3%;
     color: #1F3262;
 }
-
+a{
+    color:blue;
+}
 .contenidoB {
     margin: 3%;
     margin-left: 25%;
@@ -97,7 +99,7 @@
 
     font-style: normal;
     font-weight: bold;
-    font-size: 15px;
+    font-size: x-large;
     line-height: 26px;
     letter-spacing: 0.04em;
     color: #1F3262;
@@ -119,6 +121,27 @@
 #caja{
     display:flex;
     
+}
+
+
+.logoF{
+    max-width: 150px;
+    max-height: 150px;
+    margin:3%;
+}
+.logoC{
+    max-width: 150px !important;
+    max-height: 150px !important;
+    margin:3%;
+    background-color: goldenrod !important;
+}
+
+.logo{
+    max-width: 150px;
+    max-height: 150px;
+}
+.logo:checked{
+    background-color: lightblue;
 }
 
 #boton_rf_enviar {
