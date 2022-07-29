@@ -11,6 +11,7 @@ import './components/Footer.css';
 import './components/AccesoFormador/AccesoFormador.css';
 import './components/AccesoAlumno/AccesoAlumno.css';
 import './components/RegistroAlumno/registroAlumno.css';
+import './components/Perfil/Perfil.css';
 
 function App() {
   return (

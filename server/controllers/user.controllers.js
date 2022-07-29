@@ -40,6 +40,7 @@ const user = {
             });
         });
     },
+    
     registroFormador: (req, res) => {
         console.log(req.body)
         MongoClient.connect(url, function (err, db) {
@@ -71,7 +72,7 @@ const user = {
             });
         });
     },
-
+    
     login: (req, res) => {
         console.log(req.body)
         MongoClient.connect(url, function (err, db) {
@@ -124,9 +125,7 @@ const user = {
             //     })
             // });
         })
-    }
-
-    
+    }   
 };
 
 module.exports = user;

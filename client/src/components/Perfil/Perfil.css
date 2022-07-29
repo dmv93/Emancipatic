@@ -1,0 +1,53 @@
+@media screen and (max-width: 420px) {
+
+    .contendor{
+      width: 100%;
+    }
+
+    
+    .imgRedonda {
+      margin-top: 10%;
+      width:100px;
+      height:100px;
+      border-radius:150px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+    #perfil{
+        font-family: 'Baloo Paaji 2', cursive;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+
+      #categorias_h1{
+        color: #4A4D9B;;
+        font-family: 'Baloo Paaji 2', cursive;
+        font-size: 30px;
+        letter-spacing: 0.04em;
+        text-align: center;
+      }
+
+        .selecciona_categorias{
+          display: grid;
+          grid-template-columns:180px 180px;
+          grid-template-rows: 180px 180px 180px;
+        }
+
+
+      .rrss{
+        border-radius: 10px;
+        width: 100%;
+        padding: 4%;
+      }
+
+      .img_src{
+        width: 100%;
+        border-radius: 10px;
+        margin: 10%;
+        padding: 10%;
+        border-style: solid;
+      }
+};
