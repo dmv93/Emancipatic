@@ -210,7 +210,7 @@ a{
 
 
 
-form .contenido input {
+div .contenido input {
     display: block;
     width: 100%;
     border-radius: 20px;
@@ -219,7 +219,7 @@ form .contenido input {
     font-size: 18px;
 }
 
-form .contenido label {
+div .contenido label {
     display: block;
     position: absolute;
     width: auto;
