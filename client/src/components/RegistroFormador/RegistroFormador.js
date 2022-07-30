@@ -116,43 +116,49 @@ function RegistroFormador(props) {
                     <h4 id="h1_rf">REGISTRO FORMADOR</h4>
                     <div className="contenido">
                         <label id="label_rf_nombre">Nombre*</label>
-                        <input id="input_rf_nombre" pattern="" 
+                        <input id="input_rf_nombre" pattern="^([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']?$" 
                         onChange={(e) => setNombre(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_apellidos">Apellidos</label>
-                        <input id="input_rf_apellidos" onChange={(e) => setApellidos(e.target.value)} ></input>
+                        <input id="input_rf_apellidos" pattern="^([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])+[\s]?([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])?$" onChange={(e) => setApellidos(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_email">Email*</label>
-                        <input id="input_rf_email" onChange={(e) => setEmail(e.target.value)} ></input>
+                        <input id="input_rf_email" pattern="^[a-zA-Z0-9_\-\.~]{2,}@[a-zA-Z0-9_\-\.~]{2,}\.[a-zA-Z]{2,4}$"
+                         onChange={(e) => setEmail(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_telefono">Teléfono Móvil*</label>
-                        <input id="input_rf_telefono" onChange={(e) => setTelefono(e.target.value)} ></input>
+                        <input id="input_rf_telefono" pattern="[0-9]{9}"
+                         onChange={(e) => setTelefono(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_dni">DNI*</label>
-                        <input id="input_rf_dni" onChange={(e) => setDni(e.target.value)} ></input>
+                        <input id="input_rf_dni" pattern="(^[0-9]{8})([-]?)([A-Za-z]{1})$"
+                         onChange={(e) => setDni(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_codpostal">Código Postal</label>
-                        <input id="input_rf_codpostal" onChange={(e) => setCodpostal(e.target.value)} ></input>
+                        <input id="input_rf_codpostal" pattern="[0-9]{5}"
+                         onChange={(e) => setCodpostal(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_poblacion">Población</label>
-                        <input id="input_rf_poblacion" onChange={(e) => setPoblacion(e.target.value)} ></input>
+                        <input id="input_rf_poblacion" pattern="^([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']?$"
+                         onChange={(e) => setPoblacion(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_provincia">Provincia</label>
-                        <input id="input_rf_provincia" onChange={(e) => setProvincia(e.target.value)} ></input>
+                        <input id="input_rf_provincia" pattern="^([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']?$"
+                         onChange={(e) => setProvincia(e.target.value)} ></input>
                     </div>
                     <div className="contenido">
                         <label id="label_rf_poblacion">¿Qué temas puedes enseñar?</label>
