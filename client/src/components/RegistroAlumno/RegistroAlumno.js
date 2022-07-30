@@ -63,14 +63,23 @@ const RegistroAlumno = () => {
                     <label htmlFor="" id="label_ra_provincia">Provincia</label>
                     <input type={"text"} id="input_ra_provincia" name="provincia" placeholder="" onChange={(e) => { setProvincia(e.target.value) }} />
                 </div>                    
-                <div id="quinto_ra">
+                {/* <div id="quinto_ra">
                     <input type={"checkbox"} id="input_ra_check"></input>
                     <label htmlFor="" id="label_ra_check">He leído y acepto la Política de Provacidad</label>
                     <br/>
                     <br/>
                     {nombre && apellidos && email && telefono && dni && codpostal && poblacion && provincia ? <button id="boton_ra_enviar" onClick={() => sendDataAlumno()} >ENVIAR</button> : <button id="boton_ra_enviar" onClick={() => sendDataAlumno()} disabled>ENVIAR</button>}
                     
-                </div>
+                </div> */}
+                <br />
+                <div className="quinto_ra">
+                        <input id="input_ra_check" type={"checkbox"} ></input>
+                        <label id="label_ra_check">He leido y acepto la <a>Política de Privacidad</a></label>
+                        <br />
+                        <br />
+                        {nombre && apellidos && email && telefono && dni && codpostal && poblacion && provincia ? <button id="boton_ra_enviar" onClick={() => sendDataAlumno()} >ENVIAR</button> : <button id="boton_ra_enviar" onClick={() => sendDataAlumno()} disabled>ENVIAR</button>}
+
+                    </div>
                 </form>
         </div>
     )

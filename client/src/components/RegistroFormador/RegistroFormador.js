@@ -118,7 +118,8 @@ function RegistroFormador(props) {
                     <h4 id="h1_rf">REGISTRO FORMADOR</h4>
                     <div className="contenido">
                         <label id="label_rf_nombre">Nombre*</label>
-                        <input id="input_rf_nombre" onChange={(e) => setNombre(e.target.value)} ></input>
+                        <input id="input_rf_nombre" pattern="" 
+                        onChange={(e) => setNombre(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
@@ -163,16 +164,16 @@ function RegistroFormador(props) {
                     </div>
 
                     <div className="contenido">
-                        <img className={cls1} src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c543.png" onClick={() => img1()}></img>
-                        <img className={cls2} type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" onClick={() => img2()}></img>
+                        <img className={cls1} src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c543.png" alt="whatsapp" onClick={() => img1()}></img>
+                        <img className={cls2} type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="instagram" onClick={() => img2()}></img>
                     </div>
                     <div className="contenido">
-                        <img className={cls3} type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/584px-Twitter-logo.svg.png" onClick={() => img3()}></img>
-                        <img className={cls4} type="image" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" onClick={() => img4()}></img>
+                        <img className={cls3} type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/584px-Twitter-logo.svg.png" alt="twitter" onClick={() => img3()}></img>
+                        <img className={cls4} type="image" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="facebook" onClick={() => img4()}></img>
                     </div>
                     <div className="contenido">
-                        <img className={cls5} type="image" src="https://logodownload.org/wp-content/uploads/2014/10/youtube-logo-5-2.png" onClick={() => img5()}></img>
-                        <img className={cls6} type="image" src="https://1000marcas.net/wp-content/uploads/2022/01/Google-Meet-Logo.png" onClick={() => img6()}></img>
+                        <img className={cls5} type="image" src="https://logodownload.org/wp-content/uploads/2014/10/youtube-logo-5-2.png" alt="youtube" onClick={() => img5()}></img>
+                        <img className={cls6} type="image" src="https://1000marcas.net/wp-content/uploads/2022/01/Google-Meet-Logo.png" alt="google" onClick={() => img6()}></img>
                     </div>
                     <div className="contenidoB">
                         <input id="input_rf_check" type="checkbox" ></input>

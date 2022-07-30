@@ -17,7 +17,7 @@ class Main extends Component {
     render() {
         return(
             <div>
-                <Navbar />
+                {/* <Navbar /> */}
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="registro" element={<RegistroFormador />} />
