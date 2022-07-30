@@ -10,37 +10,37 @@ const mydb = "Emancipatic";
 const user = {
     registroAlumno: (req, res) => {
         console.log(req.body)
-        
+
         MongoClient.connect(url, function (err, db) {
             if (err) throw err;
             var dbo = db.db(mydb);
 
             dbo.collection("Alumnos").findOne({ dni: req.body.dni }, async function (err, result) {
                 if (err) throw err;
-                
-                if(result == null){
-                    const myobj = { "nombre": req.body.nombre, "apellidos": req.body.apellidos, "email": req.body.email, "telefono": req.body.telefono, "dni":req.body.dni,"codpostal":req.body.codpostal,"poblacion":req.body.poblacion,"provincia":req.body.provincia };
+
+                if (result == null) {
+                    const myobj = { "nombre": req.body.nombre, "apellidos": req.body.apellidos, "email": req.body.email, "telefono": req.body.telefono, "dni": req.body.dni, "codpostal": req.body.codpostal, "poblacion": req.body.poblacion, "provincia": req.body.provincia };
                     dbo.collection("Alumnos").insertOne(myobj, async function (err, result1) {
                         if (err) throw err;
-                      console.log("Alumno insertado")
-                      res.json({
-                        data:result1,
-                        message:'bien'
-                      })
-        
+                        console.log("Alumno insertado")
+                        res.json({
+                            data: result1,
+                            message: 'bien'
+                        })
+
                     });
                 } else {
                     res.json({
-                        
-                        message:'mal'
-                      })
+
+                        message: 'mal'
+                    })
                 }
-                
+
 
             });
         });
     },
-    
+
     registroFormador: (req, res) => {
         console.log(req.body)
         MongoClient.connect(url, function (err, db) {
@@ -49,37 +49,37 @@ const user = {
 
             dbo.collection("Formadores").findOne({ dni: req.body.dni }, async function (err, result) {
                 if (err) throw err;
-                
-                if(result == null){
-                    const myobj = { "nombre": req.body.nombre, "apellidos": req.body.apellidos, "email": req.body.email, "telefono": req.body.telefono, "dni":req.body.dni,"codpostal":req.body.codpostal,"poblacion":req.body.poblacion,"provincia":req.body.provincia };
+
+                if (result == null) {
+                    const myobj = { "nombre": req.body.nombre, "apellidos": req.body.apellidos, "email": req.body.email, "telefono": req.body.telefono, "dni": req.body.dni, "codpostal": req.body.codpostal, "poblacion": req.body.poblacion, "provincia": req.body.provincia, "asignaturas": [await req.body.red1, await req.body.red2, await req.body.red3, await req.body.red4, await req.body.red5, await req.body.red6] };
                     dbo.collection("Formadores").insertOne(myobj, async function (err, result1) {
                         if (err) throw err;
-                      console.log("Formador insertado")
-                      res.json({
-                        data:result1,
-                        message:'bien'
-                      })
-        
+                        console.log("Formador insertado")
+                        res.json({
+                            data: result1,
+                            message: 'bien'
+                        })
+
                     });
                 } else {
                     res.json({
-                        
-                        message:'mal'
-                      })
+
+                        message: 'mal'
+                    })
                 }
-                
+
 
             });
         });
     },
-    
+
     login: (req, res) => {
         console.log(req.body)
         MongoClient.connect(url, function (err, db) {
             if (err) throw err
             var dbo = db.db(mydb);
 
-            const myobj = {"telefono": req.body.telefono, "dni": req.body.password}
+            const myobj = { "telefono": req.body.telefono, "dni": req.body.password }
 
             // dbo.collection("Formadores").findOne(myobj, async function (err, result) {
             //     if (err) throw err
@@ -100,19 +100,19 @@ const user = {
         })
     },
 
-    loginFormador: (req,res) => {
+    loginFormador: (req, res) => {
         console.log(req.body)
         MongoClient.connect(url, function (err, db) {
             if (err) throw err
             var dbo = db.db(mydb);
 
-            const myobj = {"telefono": req.body.telefono, "dni": req.body.password}
+            const myobj = { "telefono": req.body.telefono, "dni": req.body.password }
 
             dbo.collection("Formadores").findOne(myobj, async function (err, result) {
                 if (err) throw err
                 console.log("Usuario autenticado")
                 res.json({
-                    data:result,
+                    data: result,
                     message: true
                 })
             });
@@ -125,7 +125,7 @@ const user = {
             //     })
             // });
         })
-    }   
+    }
 };
 
 module.exports = user;

@@ -89,12 +89,13 @@ function RegistroFormador(props) {
         }
     }
 
+
     const sendDataFormador = () => {
 
         const requestOptions = {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ nombre: nombre, apellidos: apellidos, email: email, telefono: telefono, dni: dni, codpostal: codpostal, poblacion: poblacion, provincia: provincia }),
+            body: JSON.stringify({ nombre: nombre, apellidos: apellidos, email: email, telefono: telefono, dni: dni, codpostal: codpostal, poblacion: poblacion, provincia: provincia, red1: whatsapp,red2:instagram, red3: twitter, red4: facebook, red5: youtube, red6:googleMeet}),
         };
 
         fetch("registroFormador", requestOptions)
