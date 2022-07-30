@@ -16,4 +16,26 @@
     background: linear-gradient(90deg, #4A4D9B 3.42%, #49BCC4 57.63%);
 }
 
+.button_navbar_atras{
+    width:25%;
+    height: 40px;
+    border-width: 3px;
+    border-radius: 15px;
+    border-color: white;
+    color: white;
+    background-color: transparent;
+    font-family: 'Baloo Paaji 2', cursive;
+}
+
+.button_navbar_menu{
+    width: 25%;
+    height: 40px;
+    border-width: 3px;
+    border-radius: 15px;
+    border-color: white;
+    color: white;
+    background-color: transparent;
+    font-family: 'Baloo Paaji 2', cursive;
+
+}
 /* Degradado Azul */
