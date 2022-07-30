@@ -97,7 +97,7 @@ function Perfil(props){
                     <img className= {cls3} src={twitter1} alt="twitter" onChange={(e) => setTwitter(e.target.value)} onClick={() => img3()} />
                 </div>
                 <div className="rrss">
-                    <img className= {cls4}  src={facebook1} alt="facebook"onChange={(e) => setFacebook(e.target.value)} onClick={() => img4()} />
+                    <img className= {cls4}  src={facebook1} alt="facebook1"onChange={(e) => setFacebook(e.target.value)} onClick={() => img4()} />
                 </div>
                 <div className="rrss">
                     <img className= {cls5}  src={youtube1} alt="youtube" onChange={(e) => setYoutube(e.target.value)} onClick={() => img5()}/>
