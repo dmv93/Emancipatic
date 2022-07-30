@@ -103,9 +103,6 @@ function RegistroFormador(props) {
             .then((res) => {
                 console.log(res.message)
             })
-
-
-
     };
 
 
