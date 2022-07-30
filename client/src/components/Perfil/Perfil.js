@@ -9,6 +9,7 @@ import facebook1 from '../../assets/facebook1.png'
 import youtube1 from '../../assets/youtube1.png'
 import googleMeet1 from '../../assets/googleMeet.png'
 import tick from '../../assets/tick.png'
+import Navbar from "../Navbar";
 
 function Perfil(props) {
 
@@ -99,7 +100,8 @@ function Perfil(props) {
 
     return (
         <div>
-            <div className="contenedor">
+            <Navbar />
+            <div className="contenedor1">
                 <div className="img_perfil">
                     <img className='imgRedonda' src={ramiro} alt="ramiro" />
                 </div>

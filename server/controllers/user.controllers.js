@@ -1,9 +1,9 @@
-
-
+const { compare } = require('bcryptjs');
 const mongo = require('mongodb');
 const url = "mongodb+srv://root:root@cluster0.njigkts.mongodb.net/test";
 const MongoClient = mongo.MongoClient;
 const mydb = "Emancipatic";
+const { encrypt } = require('../helpers/handleByCript');
 
 
 
@@ -11,15 +11,17 @@ const user = {
     registroAlumno: (req, res) => {
         console.log(req.body)
 
-        MongoClient.connect(url, function (err, db) {
+        MongoClient.connect(url, async function (err, db) {
             if (err) throw err;
             var dbo = db.db(mydb);
 
-            dbo.collection("Alumnos").findOne({ dni: req.body.dni }, async function (err, result) {
+            const passhass = await encrypt (req.body.dni);
+
+            dbo.collection("Alumnos").findOne({ dni: passhass}, async function (err, result) {
                 if (err) throw err;
 
                 if (result == null) {
-                    const myobj = { "nombre": req.body.nombre, "apellidos": req.body.apellidos, "email": req.body.email, "telefono": req.body.telefono, "dni": req.body.dni, "codpostal": req.body.codpostal, "poblacion": req.body.poblacion, "provincia": req.body.provincia };
+                    const myobj = { "nombre": req.body.nombre, "apellidos": req.body.apellidos, "email": req.body.email, "telefono": req.body.telefono, "dni": passhass, "codpostal": req.body.codpostal, "poblacion": req.body.poblacion, "provincia": req.body.provincia };
                     dbo.collection("Alumnos").insertOne(myobj, async function (err, result1) {
                         if (err) throw err;
                         console.log("Alumno insertado")
@@ -90,7 +92,8 @@ const user = {
             if (err) throw err
             var dbo = db.db(mydb);
 
-            const myobj = { "telefono": req.body.telefono, "dni": req.body.password }
+            const pass = req.body.password;
+            const myobj = { "telefono": req.body.telefono, "dni": pass }
 
             // dbo.collection("Formadores").findOne(myobj, async function (err, result) {
             //     if (err) throw err
@@ -101,12 +104,15 @@ const user = {
             //     })
             // });
             dbo.collection("Alumnos").findOne(myobj, async function (err, result) {
-                if (err) throw err
+                const checkPassword = await compare(pass, myobj.telefono)
+                if (checkPassword) {
+                   if (err) throw err
                 console.log("Alumno autenticado")
                 res.json({
                     data: result,
                     message: true
-                })
+                }) 
+                }
             });
         })
     },
