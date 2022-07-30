@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 
 function Navbar () {
     return(
-        <div>
-            
+        <div className="nav_nav">
+            <div className="navbar">
+                
+            </div>
         </div>
     )
 }

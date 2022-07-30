@@ -3,7 +3,11 @@
     .padre_ho{
         margin-bottom: 270px;
     }
+    .home {
+        display: flex;
+    }
     #h3_home {
+        display: flex;
         position: absolute;
         width: 250px;
         height: 45px;
