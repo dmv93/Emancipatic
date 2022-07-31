@@ -106,7 +106,6 @@ function Perfil(props) {
                         <img className='imgRedonda' src={ramiro} alt="ramiro" />
                     </div>
                     <h3 id="perfil">Bienvenido, Ramiro</h3>
-
                 </div>
                 <div className="categorias">
                     <h1 id="categorias_h1">Selecciona tus categorías</h1>
