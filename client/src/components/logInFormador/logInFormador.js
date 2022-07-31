@@ -35,8 +35,8 @@ const Login = () => {
     }
     return (
         <div>
-            <Navbar />
-            <div className="accesoLogin">
+{/*             <Navbar />
+ */}            <div className="accesoLogin">
                 <h3 id="h3_login">Login</h3>
             </div>
             <div className="form_login">
