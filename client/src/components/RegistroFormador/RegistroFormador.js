@@ -155,8 +155,8 @@ function RegistroFormador(props) {
 
 
         <div>
-        <Navbar />
-            <div id="caja">
+{/*         <Navbar />
+ */}            <div id="caja">
                 <div className="form_rf">
                     <h4 id="h1_rf">REGISTRO FORMADOR</h4>
                     {message ? <p>{message}</p> : ''}

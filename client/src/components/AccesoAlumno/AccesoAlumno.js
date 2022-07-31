@@ -6,8 +6,8 @@ const AccesoAlumno = () => {
 
     return(
         <div className="padre_aa">
-            <Navbar />
-            <div className="accesoAlumno">
+{/*             <Navbar />
+ */}            <div className="accesoAlumno">
                 <h3 id="h3_AccesoAlumno">Bienvenido Alumno</h3>
             </div>
             <div className="botones_AccesoAlumno">

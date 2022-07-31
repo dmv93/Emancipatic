@@ -8,8 +8,8 @@ const Home = () => {
 
     return (
         <div className="padre_ho">
-            <Navbar />
-            <div className="home">
+{/*             <Navbar />
+ */}            <div className="home">
                 <h3 id="h3_home">¿Qué eres?</h3>
             </div>
             <div className="botones_home">

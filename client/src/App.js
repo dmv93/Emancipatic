@@ -15,7 +15,8 @@ import './components/AccesoFormador/AccesoFormador.css';
 import './components/AccesoAlumno/AccesoAlumno.css';
 import './components/RegistroAlumno/registroAlumno.css';
 import './components/Perfil/Perfil.css';
-import './components/Navbar.css'
+import './components/Navbar.css';
+import './components/ProfesoresRecomendados/ProfesoresRecomendados.css'
 
 function App() {
   return (
