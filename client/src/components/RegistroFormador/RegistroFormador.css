@@ -85,6 +85,64 @@ a{
     color: #1F3262;
 }
 
+#input_rf_nombre_mal,
+
+#input_rf_email_mal,
+
+#input_rf_dni_mal,
+
+#input_rf_poblacion_mal,
+#input_rf_apellidos_mal,
+#input_rf_telefono_mal,
+#input_rf_codpostal_mal,
+#input_rf_provincia_mal {
+    box-sizing: border-box;
+
+
+
+    border: 2px solid red;
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+
+    font-family: 'Baloo Paaji';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+
+    color: #1F3262;
+}
+
+#input_rf_nombre_bien,
+
+#input_rf_email_bien,
+
+#input_rf_dni_bien,
+
+#input_rf_poblacion_bien,
+#input_rf_apellidos_bien,
+#input_rf_telefono_bien,
+#input_rf_codpostal_bien,
+#input_rf_provincia_bien {
+    box-sizing: border-box;
+
+
+
+    border: 2px solid green;
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+
+    font-family: 'Baloo Paaji';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+
+    color: #1F3262;
+}
+
 
 
 #label_rf_nombre,
