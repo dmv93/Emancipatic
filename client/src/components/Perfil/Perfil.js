@@ -99,40 +99,40 @@ function Perfil(props) {
 
 
     return (
-        <div>
-            <Navbar />
-            <div className="contenedor1">
-                <div className="img_perfil">
-                    <img className='imgRedonda' src={ramiro} alt="ramiro" />
+            <div>
+                <Navbar />
+                <div className="contenedor1">
+                    <div className="img_perfil">
+                        <img className='imgRedonda' src={ramiro} alt="ramiro" />
+                    </div>
+                    <h3 id="perfil">Bienvenido, Ramiro</h3>
                 </div>
-                <h3 id="perfil">Bienvenido, Ramiro</h3>
+                <div className="categorias">
+                    <h1 id="categorias_h1">Selecciona tus categorías</h1>
+                </div>
+                <div className="selecciona_categorias">
+                    <div className="rrss">
+                        <img className={cls1} src={imagenes1} alt="whatsApp" onChange={(e) => setWhatsapp(e.target.value)} onClick={() => img1()} />
+                    </div>
+                    <div className="rrss">
+                        <img className={cls2} src={imagenes2} alt="instagram" onChange={(e) => setInstagram(e.target.value)} onClick={() => img2()} />
+                    </div>
+                    <div className="rrss">
+                        <img className={cls3} src={imagenes3} alt="twitter" onChange={(e) => setTwitter(e.target.value)} onClick={() => img3()} />
+                    </div>
+                    <div className="rrss">
+                        <img className={cls4} src={imagenes4} alt="facebook" onChange={(e) => setFacebook(e.target.value)} onClick={() => img4()} />
+                    </div>
+                    <div className="rrss">
+                        <img className={cls5} src={imagenes5} alt="youtube" onChange={(e) => setYoutube(e.target.value)} onClick={() => img5()} />
+                    </div>
+                    <div className="rrss">
+                        <img className={cls6} src={imagenes6} alt="googleMeet" onChange={(e) => setGoogleMeet(e.target.value)} onClick={() => img6()} />
+                    </div>
+                </div>
             </div>
-            <div className="categorias">
-                <h1 id="categorias_h1">Selecciona tus categorías</h1>
-            </div>
-            <div className="selecciona_categorias">
-                <div className="rrss">
-                    <img className={cls1} src={imagenes1} alt="whatsApp" onChange={(e) => setWhatsapp(e.target.value)} onClick={() => img1()} />
-                </div>
-                <div className="rrss">
-                    <img className={cls2} src={imagenes2} alt="instagram" onChange={(e) => setInstagram(e.target.value)} onClick={() => img2()} />
-                </div>
-                <div className="rrss">
-                    <img className={cls3} src={imagenes3} alt="twitter" onChange={(e) => setTwitter(e.target.value)} onClick={() => img3()} />
-                </div>
-                <div className="rrss">
-                    <img className={cls4} src={imagenes4} alt="facebook" onChange={(e) => setFacebook(e.target.value)} onClick={() => img4()} />
-                </div>
-                <div className="rrss">
-                    <img className={cls5} src={imagenes5} alt="youtube" onChange={(e) => setYoutube(e.target.value)} onClick={() => img5()} />
-                </div>
-                <div className="rrss">
-                    <img className={cls6} src={imagenes6} alt="googleMeet" onChange={(e) => setGoogleMeet(e.target.value)} onClick={() => img6()} />
-                </div>
-            </div>
-        </div>
 
-    )
+            )
 }
 
-export default Perfil;
+            export default Perfil;
