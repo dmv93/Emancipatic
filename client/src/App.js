@@ -4,6 +4,9 @@ import { BrowserRouter, Link, Navigate } from "react-router-dom";
 // import './App.css';
 import Main from './page/Main'
 
+//IMPORTAMOS LOS ESTILOS DE BOOTSTRAP REACT
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './components/RegistroFormador/RegistroFormador.css';
 import './components/Home/home.css';
 import './components/Login/Login.css'

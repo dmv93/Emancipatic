@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar";
 
 
 
@@ -34,6 +35,7 @@ const Login = () => {
     }
     return (
         <div>
+            <Navbar />
             <div className="accesoLogin">
                 <h3 id="h3_login">Login</h3>
             </div>
