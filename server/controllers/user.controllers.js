@@ -5,7 +5,7 @@ const MongoClient = mongo.MongoClient;
 const mydb = "Emancipatic";
 const { encrypt } = require('../helpers/handleByCript');
 
-
+const functions = require("../functions/functions.js");
 
 const user = {
     registroAlumno: (req, res) => {
@@ -15,13 +15,13 @@ const user = {
             if (err) throw err;
             var dbo = db.db(mydb);
 
-            const passhass = await encrypt (req.body.dni);
+            const passhass = await encrypt(req.body.dni);
 
-            dbo.collection("Alumnos").findOne({ dni: passhass}, async function (err, result) {
+            dbo.collection("Alumnos").findOne({ dni: passhass }, async function (err, result) {
                 if (err) throw err;
 
                 if (result == null) {
-                    const myobj = { "nombre": req.body.nombre, "apellidos": req.body.apellidos, "email": req.body.email, "telefono": req.body.telefono, "dni": passhass, "codpostal": req.body.codpostal, "poblacion": req.body.poblacion, "provincia": req.body.provincia };
+                    const myobj = { "nombre": req.body.nombre, "apellidos": req.body.apellidos, "email": req.body.email, "telefono": req.body.telefono, "dni": functions.SHA1(req.body.dni), "codpostal": req.body.codpostal, "poblacion": req.body.poblacion, "provincia": req.body.provincia };
                     dbo.collection("Alumnos").insertOne(myobj, async function (err, result1) {
                         if (err) throw err;
                         console.log("Alumno insertado")
@@ -56,7 +56,7 @@ const user = {
                     if (err) throw err;
 
                     if (result == null) {
-                        const myobj = { "nombre": req.body.nombre, "apellidos": req.body.apellidos, "email": req.body.email, "telefono": req.body.telefono, "dni": req.body.dni, "codpostal": req.body.codpostal, "poblacion": req.body.poblacion, "provincia": req.body.provincia, "asignaturas": [await req.body.red1, await req.body.red2, await req.body.red3, await req.body.red4, await req.body.red5, await req.body.red6] };
+                        const myobj = { "nombre": req.body.nombre, "apellidos": req.body.apellidos, "email": req.body.email, "telefono": req.body.telefono, "dni": functions.SHA1(req.body.dni), "codpostal": req.body.codpostal, "poblacion": req.body.poblacion, "provincia": req.body.provincia, "asignaturas": [await req.body.red1, await req.body.red2, await req.body.red3, await req.body.red4, await req.body.red5, await req.body.red6] };
                         dbo.collection("Formadores").insertOne(myobj, async function (err, result1) {
                             if (err) throw err;
                             console.log("Formador insertado")
@@ -88,12 +88,14 @@ const user = {
 
     login: (req, res) => {
         console.log(req.body)
-        MongoClient.connect(url, function (err, db) {
+        MongoClient.connect(url, async function (err, db) {
             if (err) throw err
             var dbo = db.db(mydb);
 
-            const pass = req.body.password;
-            const myobj = { "telefono": req.body.telefono, "dni": pass }
+
+
+
+            const myobj = { "telefono": req.body.telefono }
 
             // dbo.collection("Formadores").findOne(myobj, async function (err, result) {
             //     if (err) throw err
@@ -104,43 +106,49 @@ const user = {
             //     })
             // });
             dbo.collection("Alumnos").findOne(myobj, async function (err, result) {
-                const checkPassword = await compare(pass, myobj.telefono)
-                if (checkPassword) {
-                   if (err) throw err
-                console.log("Alumno autenticado")
-                res.json({
-                    data: result,
-                    message: true
-                }) 
+                if (err) throw err
+                if (result.dni == functions.SHA1(req.body.dni)) {
+                    console.log("Alumno autenticado")
+                    res.json({
+                        data: result,
+                        message: true
+                    })
                 }
+
+
+
+
+
             });
         })
     },
 
     loginFormador: (req, res) => {
         console.log(req.body)
-        MongoClient.connect(url, function (err, db) {
+        MongoClient.connect(url, async function (err, db) {
             if (err) throw err
             var dbo = db.db(mydb);
 
-            const myobj = { "telefono": req.body.telefono, "dni": req.body.password }
+
+
+
+            const myobj = { "telefono": req.body.telefono }
 
             dbo.collection("Formadores").findOne(myobj, async function (err, result) {
                 if (err) throw err
-                console.log("Usuario autenticado")
-                res.json({
-                    data: result,
-                    message: true
-                })
+                if (result.dni == functions.SHA1(req.body.dni)) {
+                    console.log("Formador autenticado")
+                    res.json({
+                        data: result,
+                        message: true
+                    })
+                }
+
+
+
+
+
             });
-            // dbo.collection("Alumnos").findOne(myobj, async function (err, result) {
-            //     if (err) throw err
-            //     console.log("Alumno autenticado")
-            //     res.json({
-            //         data: result,
-            //         message: true
-            //     })
-            // });
         })
     }
 };
