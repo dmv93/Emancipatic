@@ -51,7 +51,7 @@ const user = {
 
             const { nombre, apellidos, email, telefono, dni, codpostal, poblacion, provincia } = req.body
 
-            if (nombre.match(/^[A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']?$/) && apellidos.match(/^([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])+[\s]?([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])?$/) && email.match(/^[a-zA-Z0-9_\-\.~]{2,}@[a-zA-Z0-9_\-\.~]{2,}\.[a-zA-Z]{2,4}$/) && telefono.match(/[0-9]{9}/) && dni.match(/^[0-9]{8})([-]?)([A-Za-z]{1})$/) && codpostal.match(/[0-9]{5}/) && poblacion.match(/^[A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']?$/) && provincia.match(/^[A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']?$/)) {
+            if (nombre.match(/^[A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']?$/) && apellidos.match(/^([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])+[\s]?([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])?$/) && email.match(/^[a-zA-Z0-9_\-\.~]{2,}@[a-zA-Z0-9_\-\.~]{2,}\.[a-zA-Z]{2,4}$/) && telefono.match(/[0-9]{9}/) && dni.match(/^[0-9]{8,8}[A-Za-z]$/) && codpostal.match(/[0-9]{5}/) && poblacion.match(/^[A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']?$/) && provincia.match(/^[A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']?$/)) {
                 dbo.collection("Formadores").findOne({ dni: req.body.dni }, async function (err, result) {
                     if (err) throw err;
 

@@ -33,7 +33,7 @@ const Login = () => {
             })
     }
     return (
-        <div>
+        <div className="padre_log">
             <div className="accesoLogin">
                 <h3 id="h3_login">Login</h3>
             </div>
