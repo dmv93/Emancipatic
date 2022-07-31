@@ -192,6 +192,10 @@ const user = {
 
             });
         })
+    },
+
+    interesAlumuno: (req, res) => {
+        
     }
 };
 

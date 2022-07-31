@@ -130,6 +130,7 @@ function Perfil(props) {
                         <img className={cls6} src={imagenes6} alt="googleMeet" onChange={(e) => setGoogleMeet(e.target.value)} onClick={() => img6()} />
                     </div>
                 </div>
+                <input type={"button"} value="ENVIAR"/>
             </div>
 
             )

@@ -29,14 +29,17 @@ const Login = () => {
             .then((response) => response.json())
             .then((res) => {
                 if (res.message) {
-                    window.location.assign("/")
+                    localStorage.setItem('user', telefono);
+                    window.location.assign("/perfil")
+
                 }
             })
     }
     return (
         <div className="padre_log">
-{/*             <Navbar />
- */}            <div className="accesoLogin">
+            {/* <Navbar /> */}
+            <div className="accesoLogin">
+
                 <h3 id="h3_login">Login</h3>
             </div>
             <div className="form_login">
