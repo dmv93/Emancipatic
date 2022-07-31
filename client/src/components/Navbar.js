@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, {useState} from "react";
+=======
+import React,{useState} from "react";
+>>>>>>> 8f32d17ceb2343466a8867599f14c9b9c87da84f
 import { Link } from "react-router-dom";
 
 function Navbar () {
