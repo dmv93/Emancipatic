@@ -34,6 +34,7 @@ const Login = () => {
             })
     }
     return (
+        <div className="padre_log">
         <div>
              <Navbar />
             <div className="accesoLogin">
