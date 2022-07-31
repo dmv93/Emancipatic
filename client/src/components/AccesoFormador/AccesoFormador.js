@@ -8,7 +8,7 @@ const AccesoFormador = () => {
 
     return (
         <div className="padre_af">
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="home">
                 <h3 id="h3_home">Bienvenido Formador</h3>
             </div>

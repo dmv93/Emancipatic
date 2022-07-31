@@ -6,7 +6,7 @@ const AccesoAlumno = () => {
 
     return(
         <div className="padre_aa">
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="accesoAlumno">
                 <h3 id="h3_AccesoAlumno">Bienvenido Alumno</h3>
             </div>

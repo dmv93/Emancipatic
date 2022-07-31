@@ -34,7 +34,7 @@ const RegistroAlumno = () => {
 
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <form className="formulario_ra">
                 <h2 id="h2_ra">REGISTRO ALUMNO</h2>
                 <div id="primera_ra">

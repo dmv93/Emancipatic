@@ -18,25 +18,25 @@ const Login = () => {
 
         let info = {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 telefono: telefono,
                 dni: password,
             })
         }
 
-        fetch("login",info)
+        fetch("login", info)
             .then((response) => response.json())
             .then((res) => {
-                if(res.message) {
-                    window.location.assign("/")
+                if (res.message) {
+                    localStorage.setItem('user', telefono);
+                    window.location.assign("/perfil")
                 }
             })
     }
     return (
         <div className="padre_log">
-        <div>
-             <Navbar />
+            {/* <Navbar /> */}
             <div className="accesoLogin">
                 <h3 id="h3_login">Login</h3>
             </div>
