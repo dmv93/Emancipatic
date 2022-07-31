@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import RegistroFormador from "../components/RegistroFormador/RegistroFormador"
-// import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Home from "../components/Home/Home";
 import RegistroAlumno from "../components/RegistroAlumno/RegistroAlumno";
@@ -17,10 +17,6 @@ class Main extends Component {
     render() {
         return(
             <div>
-<<<<<<< HEAD
-=======
-                {/* <Navbar />  */}
->>>>>>> 8f32d17ceb2343466a8867599f14c9b9c87da84f
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="registro" element={<RegistroFormador />} />

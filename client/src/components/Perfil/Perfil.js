@@ -99,7 +99,6 @@ function Perfil(props) {
 
 
     return (
-<<<<<<< HEAD
             <div>
                 <Navbar />
                 <div className="contenedor1">
@@ -107,13 +106,7 @@ function Perfil(props) {
                         <img className='imgRedonda' src={ramiro} alt="ramiro" />
                     </div>
                     <h3 id="perfil">Bienvenido, Ramiro</h3>
-=======
-        <div>
-            <Navbar />
-            <div className="contenedor1">
-                <div className="img_perfil">
-                    <img className='imgRedonda' src={ramiro} alt="ramiro" />
->>>>>>> 8f32d17ceb2343466a8867599f14c9b9c87da84f
+
                 </div>
                 <div className="categorias">
                     <h1 id="categorias_h1">Selecciona tus categorías</h1>
