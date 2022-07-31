@@ -60,6 +60,7 @@ const user = {
 
             const { nombre, apellidos, email, telefono, dni, codpostal, poblacion, provincia } = req.body
 
+
             const array = ['bien', 'bien', 'bien', 'bien', 'bien', 'bien', 'bien', 'bien']
             console.log(!poblacion.match(/^[A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']?$/))
          

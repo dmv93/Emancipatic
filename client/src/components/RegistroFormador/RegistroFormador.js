@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 // import { scraping } from "../../../controllers/user.controllers";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar";
+
 
 import whatsApp from '../../assets/whatsApp.png'
 import instagram1 from '../../assets/instagram1.png'
@@ -197,8 +199,9 @@ function RegistroFormador(props) {
     return (
 
 
-        <div >
-            <div id="caja">
+        <div>
+{/*         <Navbar />
+ */}            <div id="caja">
                 <div className="form_rf">
                     <h4 id="h1_rf">REGISTRO FORMADOR</h4>
                     {message ? <p>{message}</p> : ''}

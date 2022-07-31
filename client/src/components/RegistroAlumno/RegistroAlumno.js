@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar";
 
 const RegistroAlumno = () => {
 
@@ -33,7 +34,8 @@ const RegistroAlumno = () => {
 
     return (
         <div>
-            <form className="formulario_ra">
+{/*             <Navbar />
+ */}            <form className="formulario_ra">
                 <h2 id="h2_ra">REGISTRO ALUMNO</h2>
                 <div id="primera_ra">
                     <label htmlFor="" id="label_ra_nombre">Nombre</label>
