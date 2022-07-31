@@ -36,6 +36,7 @@ const RegistroAlumno = () => {
         <div>
             {/* <Navbar /> */}
             <form className="formulario_ra">
+
                 <h2 id="h2_ra">REGISTRO ALUMNO</h2>
                 <div id="primera_ra">
                     <label htmlFor="" id="label_ra_nombre">Nombre</label>

@@ -31,6 +31,7 @@ const Login = () => {
                 if (res.message) {
                     localStorage.setItem('user', telefono);
                     window.location.assign("/perfil")
+
                 }
             })
     }
@@ -38,6 +39,7 @@ const Login = () => {
         <div className="padre_log">
             {/* <Navbar /> */}
             <div className="accesoLogin">
+
                 <h3 id="h3_login">Login</h3>
             </div>
             <div className="form_login">
