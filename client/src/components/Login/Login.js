@@ -27,7 +27,7 @@ const Login = () => {
         fetch("login",info)
             .then((response) => response.json())
             .then((res) => {
-                if(res) {
+                if(res.message) {
                     window.location.assign("/")
                 }
             })
