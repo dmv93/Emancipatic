@@ -305,6 +305,25 @@ const user = {
                 }
             });
         })  
+    },
+
+    valoracionFormador: (req, res) => {
+        MongoClient.connect(url, async function (err, db) {
+            if (err) throw err
+            var dbo = db.db(mydb);
+
+            
+            
+            dbo.collection("Formadores").find({}).toArray(function (err, result) {
+                if (err) throw err;
+                console.log(result)
+                res.json({
+                    data: result
+                })
+
+                // db.close();
+            });
+        }) 
     }
 };
 
