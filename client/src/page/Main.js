@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import RegistroFormador from "../components/RegistroFormador/RegistroFormador"
-// import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Home from "../components/Home/Home";
 import RegistroAlumno from "../components/RegistroAlumno/RegistroAlumno";
@@ -11,13 +11,13 @@ import AccesoAlumno from "../components/AccesoAlumno/AccesoAlumno";
 import AccesoFormador from "../components/AccesoFormador/AccesoFormador";
 import LoginFormador from "../components/logInFormador/logInFormador"
 import Perfil from "../components/Perfil/Perfil";
+import ProfesoresRecomendados from "../components/ProfesoresRecomendados/ProfesoresRecomendados";
 
 
 class Main extends Component {
     render() {
         return(
             <div>
-                {/* <Navbar />  */}
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="registro" element={<RegistroFormador />} />
@@ -27,6 +27,8 @@ class Main extends Component {
                     <Route path="/accesoFormador" element={<AccesoFormador />} />
                     <Route path="/loginFormador" element={<LoginFormador />} />
                     <Route path="/perfil" element={<Perfil />} />
+                    <Route path="/profesoresrecomendados" element={<ProfesoresRecomendados />} />
+
                 </Routes>
                 <Footer />
             </div>

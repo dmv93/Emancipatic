@@ -1,6 +1,9 @@
 
 @media screen and (max-width: 420px) {
 
+    .padre_log {
+        margin-bottom: 270px;
+    }
 #h3_login{
     position: absolute;
     width: 450px;
@@ -68,8 +71,6 @@
         height: 60px;
     }
 }
-
-
 
 
 @media screen and (min-width: 1200px) {

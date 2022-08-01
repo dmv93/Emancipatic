@@ -144,7 +144,7 @@ html {
     .siguenos {
         width: 25%;
         display: flex;
-        /* margin-left: 60px;  */
+         margin-left: 80px;
         flex-direction: row;
     }
 

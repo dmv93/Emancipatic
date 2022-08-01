@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 // import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import Navbar from "../Navbar";
 const AccesoAlumno = () => {
 
     return(
         <div className="padre_aa">
+            {/* <Navbar /> */}
             <div className="accesoAlumno">
                 <h3 id="h3_AccesoAlumno">Bienvenido Alumno</h3>
             </div>
