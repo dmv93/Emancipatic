@@ -7,6 +7,7 @@ router.post("/registroAlumno", user.registroAlumno);
 router.post("/registroFormador", user.registroFormador);
 router.post("/login", user.login);
 router.post("/loginFormador", user.loginFormador);
-router.post("/interesAlumuno", user.interesAlumuno);
+router.post("/interes", user.interesAlumno);
+router.post("/informacionAlumno", user.informacionAlumno);
 
 module.exports = router;

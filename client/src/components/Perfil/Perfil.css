@@ -63,4 +63,9 @@
         border-color: #49BCC4;
         border-width: 5px;
       }
+
+      .boton_pe{
+        margin-top: 5em;
+        margin-left: 4em
+      }
 };

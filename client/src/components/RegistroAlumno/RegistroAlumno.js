@@ -14,6 +14,7 @@ const RegistroAlumno = () => {
     const [codpostal, setCodPostal] = useState("");
     const [poblacion, setPoblacion] = useState("");
     const [provincia, setProvincia] = useState("");
+    const [privacidad, setPrivacidad] = useState("")
 
     const sendDataAlumno = () => {
 
@@ -84,13 +85,19 @@ const RegistroAlumno = () => {
                 </div> */}
                 <br />
                 <div className="quinto_ra">
-                        <input id="input_ra_check" type={"checkbox"} ></input>
+                        {/* <input id="input_ra_check" type={"checkbox"} ></input>
                         <label id="label_ra_check">He leido y acepto la <a>Política de Privacidad</a></label>
                         <br />
                         <br />
-                        {nombre && apellidos && email && telefono && dni && codpostal && poblacion && provincia ? <button id="boton_ra_enviar" onClick={() => sendDataAlumno()} >ENVIAR</button> : <button id="boton_ra_enviar" onClick={() => sendDataAlumno()} disabled>ENVIAR</button>}
+                        {nombre && apellidos && email && telefono && dni && codpostal && poblacion && provincia ? <button id="boton_ra_enviar" onClick={() => sendDataAlumno()} >ENVIAR</button> : <button id="boton_ra_enviar" onClick={() => sendDataAlumno()} disabled>ENVIAR</button>} */}
 
-                    </div>
+                </div>
+                <div className="aceptarCosa">
+                    <label htmlFor="" id="label_login_privacidad"></label>
+                    <input type={"checkbox"} id="input_login_privacidad" name="privacidad" placeholder="" onChange={(e) => { setPrivacidad(e.target.value) }} />He leido y acepto la política de privacidad
+                    <input type={"button"} className="button_login_enviar" onClick={() => sendDataAlumno()} value={"ENVIAR"} /> 
+                </div>
+                
                 </form>
         </div>
     )
