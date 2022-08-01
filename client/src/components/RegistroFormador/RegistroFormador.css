@@ -49,8 +49,8 @@ a{
 color:blue;
 }
 .contenidoB {
-margin-top: 3%;
 margin: 3%;
+margin-top: 3%;
 margin-left: 25%;
 }
 
@@ -150,9 +150,9 @@ color: #1F3262;
 #label_rf_apellidos,
 #label_rf_telefono,
 #label_rf_codpostal,
-#label_rf_provincia {
+#label_rf_provincia
+{
 font-family: 'Baloo Paaji 2';
-
 font-style: normal;
 font-weight: bold;
 font-size: x-large;
@@ -161,6 +161,10 @@ letter-spacing: 0.04em;
 color: #1F3262;
 }
 
+#label_rf_check{
+    color: grey;
+    font-size: 10px;;
+}
 
 
 .form_rf {
