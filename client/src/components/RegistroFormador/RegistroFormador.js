@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar";
 
 
-import whatsApp from '../../assets/whatsApp.png'
-import instagram1 from '../../assets/instagram1.png'
-import twitter1 from '../../assets/twitter1.png'
-import facebook1 from '../../assets/facebook1.png'
-import youtube1 from '../../assets/youtube1.png'
-import googleMeet1 from '../../assets/googleMeet.png'
-import tick from '../../assets/tick.png'
+// import whatsApp from '../../assets/whatsApp.png'
+// import instagram1 from '../../assets/instagram1.png'
+// import twitter1 from '../../assets/twitter1.png'
+// import facebook1 from '../../assets/facebook1.png'
+// import youtube1 from '../../assets/youtube1.png'
+// import googleMeet1 from '../../assets/googleMeet.png'
+// import tick from '../../assets/tick.png'
 
 //Componente funcional -> 
 function RegistroFormador(props) {
@@ -18,12 +18,12 @@ function RegistroFormador(props) {
 
     const [message, setMessage] = useState("")
 
-    const [imagenes1, setImagenes1] = useState(whatsApp)
-    const [imagenes2, setImagenes2] = useState(instagram1)
-    const [imagenes3, setImagenes3] = useState(twitter1)
-    const [imagenes4, setImagenes4] = useState(facebook1)
-    const [imagenes5, setImagenes5] = useState(youtube1)
-    const [imagenes6, setImagenes6] = useState(googleMeet1)
+    // const [imagenes1, setImagenes1] = useState(whatsApp)
+    // const [imagenes2, setImagenes2] = useState(instagram1)
+    // const [imagenes3, setImagenes3] = useState(twitter1)
+    // const [imagenes4, setImagenes4] = useState(facebook1)
+    // const [imagenes5, setImagenes5] = useState(youtube1)
+    // const [imagenes6, setImagenes6] = useState(googleMeet1)
 
     const [nombre, setNombre] = useState("");
     const [apellidos, setApellidos] = useState("");
@@ -43,93 +43,93 @@ function RegistroFormador(props) {
     const [inputPoblacion, setInputPoblacion] = useState("input_rf_poblacion");
     const [inputProvincia, setInputProvincia] = useState("input_rf_provincia");
 
-    const [whatsapp, setWhatsapp] = useState("");
-    const [cls1, setCls1] = useState("logoF");
+    // const [whatsapp, setWhatsapp] = useState("");
+    // const [cls1, setCls1] = useState("logoF");
 
-    const [instagram, setInstagram] = useState("");
-    const [cls2, setCls2] = useState("logoF");
+    // const [instagram, setInstagram] = useState("");
+    // const [cls2, setCls2] = useState("logoF");
 
-    const [twitter, setTwitter] = useState("");
-    const [cls3, setCls3] = useState("logoF");
+    // const [twitter, setTwitter] = useState("");
+    // const [cls3, setCls3] = useState("logoF");
 
-    const [facebook, setFacebook] = useState("");
-    const [cls4, setCls4] = useState("logoF");
+    // const [facebook, setFacebook] = useState("");
+    // const [cls4, setCls4] = useState("logoF");
 
-    const [youtube, setYoutube] = useState("");
-    const [cls5, setCls5] = useState("logoF");
+    // const [youtube, setYoutube] = useState("");
+    // const [cls5, setCls5] = useState("logoF");
 
-    const [googleMeet, setGoogleMeet] = useState("");
-    const [cls6, setCls6] = useState("logoF");
+    // const [googleMeet, setGoogleMeet] = useState("");
+    // const [cls6, setCls6] = useState("logoF");
 
     const [policy, setPolicy] = useState("");
 
 
-    const img1 = () => {
-        if (cls1 == "logoF") {
-            setCls1("logoC")
-            setWhatsapp("Whatsapp")
-            setImagenes1(tick)
-        } else {
-            setCls1("logoF")
-            setWhatsapp("")
-            setImagenes1(whatsApp)
-        }
-    }
-    const img2 = () => {
-        if (cls2 == "logoF") {
-            setCls2("logoC")
-            setInstagram("Instagram")
-            setImagenes2(tick)
-        } else {
-            setCls2("logoF")
-            setInstagram("")
-            setImagenes2(instagram1)
-        }
-    }
-    const img3 = () => {
-        if (cls3 == "logoF") {
-            setCls3("logoC")
-            setTwitter("Twitter")
-            setImagenes3(tick)
-        } else {
-            setCls3("logoF")
-            setTwitter("")
-            setImagenes3(twitter1)
-        }
-    }
-    const img4 = () => {
-        if (cls4 == "logoF") {
-            setCls4("logoC")
-            setFacebook("Facebook")
-            setImagenes4(tick)
-        } else {
-            setCls4("logoF")
-            setFacebook("")
-            setImagenes4(facebook1)
-        }
-    }
-    const img5 = () => {
-        if (cls5 == "logoF") {
-            setCls5("logoC")
-            setYoutube("Youtube")
-            setImagenes5(tick)
-        } else {
-            setCls5("logoF")
-            setYoutube("")
-            setImagenes5(youtube1)
-        }
-    }
-    const img6 = () => {
-        if (cls6 == "logoF") {
-            setCls6("logoC")
-            setGoogleMeet("Google Meet")
-            setImagenes6(tick)
-        } else {
-            setCls6("logoF")
-            setGoogleMeet("")
-            setImagenes6(googleMeet1)
-        }
-    }
+    // const img1 = () => {
+    //     if (cls1 == "logoF") {
+    //         setCls1("logoC")
+    //         setWhatsapp("Whatsapp")
+    //         setImagenes1(tick)
+    //     } else {
+    //         setCls1("logoF")
+    //         setWhatsapp("")
+    //         setImagenes1(whatsApp)
+    //     }
+    // }
+    // const img2 = () => {
+    //     if (cls2 == "logoF") {
+    //         setCls2("logoC")
+    //         setInstagram("Instagram")
+    //         setImagenes2(tick)
+    //     } else {
+    //         setCls2("logoF")
+    //         setInstagram("")
+    //         setImagenes2(instagram1)
+    //     }
+    // }
+    // const img3 = () => {
+    //     if (cls3 == "logoF") {
+    //         setCls3("logoC")
+    //         setTwitter("Twitter")
+    //         setImagenes3(tick)
+    //     } else {
+    //         setCls3("logoF")
+    //         setTwitter("")
+    //         setImagenes3(twitter1)
+    //     }
+    // }
+    // const img4 = () => {
+    //     if (cls4 == "logoF") {
+    //         setCls4("logoC")
+    //         setFacebook("Facebook")
+    //         setImagenes4(tick)
+    //     } else {
+    //         setCls4("logoF")
+    //         setFacebook("")
+    //         setImagenes4(facebook1)
+    //     }
+    // }
+    // const img5 = () => {
+    //     if (cls5 == "logoF") {
+    //         setCls5("logoC")
+    //         setYoutube("Youtube")
+    //         setImagenes5(tick)
+    //     } else {
+    //         setCls5("logoF")
+    //         setYoutube("")
+    //         setImagenes5(youtube1)
+    //     }
+    // }
+    // const img6 = () => {
+    //     if (cls6 == "logoF") {
+    //         setCls6("logoC")
+    //         setGoogleMeet("Google Meet")
+    //         setImagenes6(tick)
+    //     } else {
+    //         setCls6("logoF")
+    //         setGoogleMeet("")
+    //         setImagenes6(googleMeet1)
+    //     }
+    // }
     const politica = () => {
         if (policy == "") {
             setPolicy("True")
@@ -144,7 +144,7 @@ function RegistroFormador(props) {
         const requestOptions = {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ nombre: nombre, apellidos: apellidos, email: email, telefono: telefono, dni: dni, codpostal: codpostal, poblacion: poblacion, provincia: provincia, red1: whatsapp, red2: instagram, red3: twitter, red4: facebook, red5: youtube, red6: googleMeet }),
+            body: JSON.stringify({ nombre: nombre, apellidos: apellidos, email: email, telefono: telefono, dni: dni, codpostal: codpostal, poblacion: poblacion, provincia: provincia }),
         };
 
         fetch("registroFormador", requestOptions)
@@ -252,7 +252,6 @@ function RegistroFormador(props) {
                         <input id={inputProvincia}
                             onChange={(e) => setProvincia(e.target.value)} ></input>
                     </div>
-
                     <div className="aceptarCosa">
                     <div className="privacidad_checkbox">
                         <input  type="checkbox" onClick={() => politica()}></input>
@@ -262,11 +261,7 @@ function RegistroFormador(props) {
                     <br />
                     {nombre && apellidos && email && telefono && dni && codpostal && poblacion && provincia  && policy ? <button className="button_login_enviar"  onClick={() => sendDataFormador()} >ENVIAR</button> : <button id="boton_rf_enviar" onClick={() => sendDataFormador()} disabled>ENVIAR</button>}
                 </div>
-
-
-
                 </div>
-
             </div>
         </div>
     )

@@ -9,5 +9,7 @@ router.post("/login", user.login);
 router.post("/loginFormador", user.loginFormador);
 router.post("/interes", user.interesAlumno);
 router.post("/informacionAlumno", user.informacionAlumno);
+router.post("/nombreFormador", user.nombreFormador);
+router.post("/asignaturasFormador", user.asignaturasFormador);
 
 module.exports = router;

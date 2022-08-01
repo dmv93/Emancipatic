@@ -29,7 +29,8 @@ const Login = () => {
             .then((response) => response.json())
             .then((res) => {
                 if(res) {
-                    window.location.assign("/")
+                    localStorage.setItem('userFormador', telefono)
+                    window.location.assign("/perfilProfesor")
                 }
             })
     }
@@ -45,7 +46,7 @@ const Login = () => {
                     <input type={"telefono"} id="input_login_telefono" name="telefono" placeholder="" onChange={(e) => { setTelefono(e.target.value) }} />
 
                     <label htmlFor="" id="label_login_password">Contraseña</label>
-                    <input type={"passsword"} id="input_login_password" name="password" placeholder="" onChange={(e) => { setPassword(e.target.value) }} />
+                    <input type={"password"} id="input_login_password" name="password" placeholder="" onChange={(e) => { setPassword(e.target.value) }} />
 
                     <label htmlFor="" id="label_login_privacidad"></label>
                     <input type={"checkbox"} id="input_login_privacidad" name="privacidad" placeholder="" onChange={(e) => { setPrivacidad(e.target.value) }} />He leido y acepto la política de privacidad
