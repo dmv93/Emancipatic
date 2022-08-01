@@ -1,125 +1,137 @@
 @media screen and (max-width: 420px) {
 
 
-    .contendor_profesor {
-        width: 100%;
-    }
+  .contendor_profesor {
+    width: 100%;
+  }
 
-    #perfil {
-        padding: 5%;
-        font-family: 'Baloo Paaji 2', cursive;
-        font-size: 25px;
-        text-align: center;
-        line-height: 35px;
-        letter-spacing: 0.04em;
-        color: #1F3262;
-    }
+  #perfil {
+    padding: 5%;
+    font-family: 'Baloo Paaji 2', cursive;
+    font-size: 25px;
+    text-align: center;
+    line-height: 35px;
+    letter-spacing: 0.04em;
+    color: #1F3262;
+  }
 
-    #perfil_profesor{
-        font-family: 'Baloo Paaji 2', cursive;
-        line-height: 35px;
-        letter-spacing: 0.04em;
-        color: #1F3262;
-    }
+  #perfil_profesor {
+    font-family: 'Baloo Paaji 2', cursive;
+    line-height: 35px;
+    letter-spacing: 0.04em;
+    color: #1F3262;
+  }
 
-    .contendor_perfil_profesores {
-        display: flex;
-        flex-direction: column;
-        margin: 5%;
-        border-radius: 15px;
-        border: 3px solid #49BCC4;
-    }   
-    .tarjeta{
-        display: flex;
-        flex-direction: wrap;
-    }
+ 
 
-    .imgRedonda1 {
-        width: 90px;
-        height: 90px;
-        border-radius: 150px;
-        display: block;
-        margin-bottom: auto;
-        margin-right: auto;
-        margin-top: auto;
-        padding: 4%;
-    }
+  #estrellaBien {
+    color: #49BCC4
+  }
 
-    #perfil_profesor {
-        padding: 10%;
-        font-family: 'Baloo Paaji 2', cursive;
-        font-size: 30px;
-    }
+  #estrella {
+    color: grey
+  }
 
-    .contenedor_grid{
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .contendor_perfil_profesores {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    border-radius: 15px;
+    border: 3px solid #49BCC4;
+  }
 
-    .selecciona_categorias_profesores {
-        margin: 2%;
-        padding: 2%;
-        display: grid;
-        justify-content: center;
-        grid-template-columns: 100px 100px 100px;
-        grid-template-rows: 70px;
-    }
+  .tarjeta {
+    display: flex;
+    flex-direction: wrap;
+  }
 
-    .rrss_profesores {
-        width: 100%;
-        margin-left: 15%;
-    }
+  .imgRedonda1 {
+    width: 90px;
+    height: 90px;
+    border-radius: 150px;
+    display: block;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-top: auto;
+    padding: 4%;
+  }
 
-    .img_profesor{
-        padding: 15%;
-        width: 75%;
-        border-radius: 10px;
-        border-width: 5px;
-        background-color:  #E3F1F4;
-    }
+  #perfil_profesor {
+    padding: 10%;
+    font-family: 'Baloo Paaji 2', cursive;
+    font-size: 30px;
+  }
 
-    .valoracion{
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #form {
-        width: 250px;
-        margin: 0 auto;
-        height: 50px;
-      }
-      
-      #form p {
-        text-align: center;
-      }
-      
-      #form label {
-        font-size: 20px;
-      }
-      
-      input[type="radio"] {
-        display: none;
-      }
-      
-      label {
-        color: grey;
-        font-size: 30px;
-        letter-spacing: 0.8em;
-        
-      }
-      
-      .clasificacion {
-        direction: rtl;
-        unicode-bidi: bidi-override;
-      }
-      
-      label:hover,
-      label:hover ~ label {
-        color: #49BCC4;
-      }
-      
-      input[type="radio"]:checked ~ label {
-        color: #49BCC4;
-      }
+  .contenedor_grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .selecciona_categorias_profesores {
+    margin: 2%;
+    padding: 2%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 70px;
+  }
+
+  .rrss_profesores {
+    width: 100%;
+    margin-left: 15%;
+  }
+
+  .img_profesor {
+    padding: 15%;
+    width: 75%;
+    border-radius: 10px;
+    border-width: 5px;
+    background-color: #E3F1F4;
+  }
+
+  .valoracion {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+  }
+
+  #form p {
+    text-align: center;
+  }
+
+  #form label {
+    font-size: 20px;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    color: grey;
+    font-size: 30px;
+    letter-spacing: 0.8em;
+
+  }
+
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+
+  label:hover,
+  label:hover~label {
+    color: #49BCC4;
+  }
+
+  input[type="radio"]:checked~label {
+    color: #49BCC4;
+  }
 
 
 
