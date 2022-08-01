@@ -252,42 +252,18 @@ function RegistroFormador(props) {
                         <input id={inputProvincia}
                             onChange={(e) => setProvincia(e.target.value)} ></input>
                     </div>
-                    <div className="contenido">
-                        <label id="label_rf_poblacion">¿Qué temas puedes enseñar?</label>
-                        <input id="input_rf_poblacion" value={`${whatsapp} ${instagram} ${twitter} ${facebook} ${youtube} ${googleMeet}`}></input>
 
+                    <div className="aceptarCosa">
+                    <div className="privacidad_checkbox">
+                        <input  type="checkbox" onClick={() => politica()}></input>
+                        <label id="politica_privapcidad"> He leido y acepto la <a id="color_blue">Política de Privacidad</a></label>
                     </div>
-
-                    <div className="contenedor">
-                        <div className="contenidoI">
-                            <img className={cls1} type="iamge" src={imagenes1} alt="whatsapp" onClick={() => img1()}></img>
-                        </div>
-                        <div className="contenidoI">
-                            <img className={cls2} type="image" src={imagenes2} alt="instagram" onClick={() => img2()}></img>
-                        </div>
-                        <div className="contenidoI">
-                            <img className={cls3} type="image" src={imagenes3} alt="twitter" onClick={() => img3()}></img>
-                        </div>
-                        <div className="contenidoI">
-                            <img className={cls4} type="image" src={imagenes4} alt="facebook" onClick={() => img4()}></img>
-                        </div>
-                        <div className="contenidoI">
-                            <img className={cls5} type="image" src={imagenes5} alt="youtube" onClick={() => img5()}></img>
-                        </div>
-                        <div className="contenidoI">
-                            <img className={cls6} type="image" src={imagenes6} alt="google" onClick={() => img6()}></img>
-                        </div>
+                    <br />
+                    <br />
+                    {nombre && apellidos && email && telefono && dni && codpostal && poblacion && provincia  && policy ? <button className="button_login_enviar"  onClick={() => sendDataFormador()} >ENVIAR</button> : <button id="boton_rf_enviar" onClick={() => sendDataFormador()} disabled>ENVIAR</button>}
+                </div>
 
 
-                    </div>
-
-                    <div className="contenidoB">
-                        <input id="input_rf_check" type="checkbox" onClick={() => politica()}></input>
-                        <label id="label_rf_check">He leido y acepto la <a>Política de Privacidad</a></label>
-                        <br />
-                        <br />
-                        {nombre && apellidos && email && telefono && dni && codpostal && poblacion && provincia && (whatsapp || instagram || twitter || facebook || youtube || googleMeet) && policy ? <button id="boton_rf_enviar" onClick={() => sendDataFormador()} >ENVIAR</button> : <button id="boton_rf_enviar" onClick={() => sendDataFormador()} disabled>ENVIAR</button>}
-                    </div>
 
                 </div>
 

@@ -3,6 +3,8 @@
     width: 100% !important;
     margin: 0% !important;
     box-shadow: none !important;
+    justify-content: center;
+
 }
 
 #caja{
@@ -288,4 +290,21 @@ left: 5px;
 
 padding: 5px 5px;
 border-radius: 20px;
+}
+.privacidad_checkbox {
+    font-family: 'Baloo Paaji 2';
+    font-weight: bolder;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#color_blue {
+    color: blue;
+}
+
+#politica_privacidad{
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    margin-left: 5px;
 }
