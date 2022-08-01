@@ -42,7 +42,7 @@ const Login = () => {
                     <label htmlFor="" id="label_login_telefono">Teléfono</label>
                     <input type={"telefono"} id="input_login_telefono" name="telefono" placeholder="" onChange={(e) => { setTelefono(e.target.value) }} />
 
-                    <label htmlFor="" id="label_login_password">Password</label>
+                    <label htmlFor="" id="label_login_password">Contraseña</label>
                     <input type={"passsword"} id="input_login_password" name="password" placeholder="" onChange={(e) => { setPassword(e.target.value) }} />
 
                     <label htmlFor="" id="label_login_privacidad"></label>
