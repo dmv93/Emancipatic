@@ -34,6 +34,15 @@ function RegistroFormador(props) {
     const [poblacion, setPoblacion] = useState("");
     const [provincia, setProvincia] = useState("");
 
+    const [inputNombre, setInputNombre] = useState("input_rf_nombre");
+    const [inputApellidos, setInputApellidos] = useState("input_rf_apellidos");
+    const [inputEmail, setInputEmail] = useState("input_rf_email");
+    const [inputTelefono, setInputTelefono] = useState("input_rf_telefono");
+    const [inputDni, setInputDni] = useState("input_rf_dni");
+    const [inputCodpostal, setInputCodpostal] = useState("input_rf_codpostal");
+    const [inputPoblacion, setInputPoblacion] = useState("input_rf_poblacion");
+    const [inputProvincia, setInputProvincia] = useState("input_rf_provincia");
+
     const [whatsapp, setWhatsapp] = useState("");
     const [cls1, setCls1] = useState("logoF");
 
@@ -142,10 +151,46 @@ function RegistroFormador(props) {
             .then((response) => response.json())
 
             .then((res) => {
-                if (res.message == 'bien') {
-                    setMessage('right')
-                } else if (res.message == 'mal') {
-                    setMessage('wrong')
+                
+                setInputNombre("input_rf_nombre_bien")
+                setInputApellidos("input_rf_apellidos_bien")
+                setInputEmail("input_rf_email_bien")
+                setInputTelefono("input_rf_telefono_bien")
+                setInputDni("input_rf_dni_bien")
+                setInputCodpostal("input_rf_codpostal_bien")
+                setInputPoblacion("input_rf_poblacion_bien")
+                setInputProvincia("input_rf_provincia_bien")
+
+                if (res.test[0] == 'mal') {
+
+                    setInputNombre("input_rf_nombre_mal")
+
+                }
+                if (res.test[1] == 'mal') {
+
+
+                    setInputApellidos("input_rf_apellidos_mal")
+
+                }
+                if (res.test[2] == 'mal') {
+                    setInputEmail("input_rf_email_mal")
+
+                }
+                if (res.test[3] == 'mal') {
+                    setInputTelefono("input_rf_telefono_mal")
+
+                }
+                if(res.test[4] == 'mal'){
+                    setInputDni("input_rf_dni_mal")
+                }
+                if(res.test[5] == 'mal'){
+                    setInputCodpostal("input_rf_codpostal_mal")
+                }
+                if(res.test[6] == 'mal'){
+                    setInputPoblacion("input_rf_poblacion_mal")
+                }
+                if(res.test[7] == 'mal'){
+                    setInputProvincia("input_rf_provincia_mal")
                 }
             })
     };
@@ -155,55 +200,56 @@ function RegistroFormador(props) {
 
 
         <div>
-{/*         <Navbar />
- */}            <div id="caja">
+        {/* <Navbar /> */}
+            <div id="caja">
+
                 <div className="form_rf">
                     <h4 id="h1_rf">REGISTRO FORMADOR</h4>
                     {message ? <p>{message}</p> : ''}
                     <div className="contenido">
                         <label id="label_rf_nombre">Nombre*</label>
-                        <input id="input_rf_nombre"
+                        <input id={inputNombre}
                             onChange={(e) => setNombre(e.target.value)} ></input>
                     </div>
-                    
+
                     <div className="contenido">
                         <label id="label_rf_apellidos">Apellidos</label>
-                        <input id="input_rf_apellidos" onChange={(e) => setApellidos(e.target.value)} ></input>
+                        <input id={inputApellidos} onChange={(e) => setApellidos(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_email">Email*</label>
-                        <input id="input_rf_email"
+                        <input id={inputEmail}
                             onChange={(e) => setEmail(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_telefono">Teléfono Móvil*</label>
-                        <input id="input_rf_telefono"
+                        <input id={inputTelefono}
                             onChange={(e) => setTelefono(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_dni">DNI*</label>
-                        <input id="input_rf_dni"
+                        <input id={inputDni}
                             onChange={(e) => setDni(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_codpostal">Código Postal</label>
-                        <input id="input_rf_codpostal"
+                        <input id={inputCodpostal}
                             onChange={(e) => setCodpostal(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_poblacion">Población</label>
-                        <input id="input_rf_poblacion"
+                        <input id={inputPoblacion}
                             onChange={(e) => setPoblacion(e.target.value)} ></input>
                     </div>
 
                     <div className="contenido">
                         <label id="label_rf_provincia">Provincia</label>
-                        <input id="input_rf_provincia"
+                        <input id={inputProvincia}
                             onChange={(e) => setProvincia(e.target.value)} ></input>
                     </div>
                     <div className="contenido">

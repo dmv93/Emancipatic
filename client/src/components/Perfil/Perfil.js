@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import ramiro from '../../assets/ramiro.png'
@@ -19,6 +19,8 @@ function Perfil(props) {
     const [imagenes4, setImagenes4] = useState(facebook1)
     const [imagenes5, setImagenes5] = useState(youtube1)
     const [imagenes6, setImagenes6] = useState(googleMeet1)
+    const [usuario, setNombreUsuario] = useState("");
+    const [telefonoUser, setTelefonoUser] = useState("");
 
 
     const [whatsapp, setWhatsapp] = useState("");
@@ -41,22 +43,45 @@ function Perfil(props) {
 
     const [rrss, setRRSS] = useState("");
 
+
+    useEffect(() => {
+    
+        const requestOptions = {
+            method: "POST",
+            headers: { "Content-type": "application/json"},
+            body: JSON.stringify({ telefono: JSON.parse(localStorage.getItem('user')) })
+        }
+
+        fetch("informacionAlumno", requestOptions)
+            .then((respone) => respone.json())
+            .then((res) => {
+                setNombreUsuario(res.data)
+            })
+
+    }, [])
+    console.log(telefonoUser)
+
     const img1 = () => {
         if (cls1 == "img_src") {
             setCls1("img_src_click")
             setImagenes1(tick)
+            setWhatsapp("Whatsapp")
         } else {
             setCls1("img_src")
             setImagenes1(whatsApp)
+            setWhatsapp("")
+
         }
     }
     const img2 = () => {
         if (cls2 == "img_src") {
             setCls2("img_src_click")
             setImagenes2(tick)
+            setInstagram("Instagram")
         } else {
             setCls2("img_src")
             setImagenes2(instagram1)
+            setInstagram("")
 
         }
     }
@@ -64,39 +89,63 @@ function Perfil(props) {
         if (cls3 == "img_src") {
             setCls3("img_src_click")
             setImagenes3(tick)
+            setTwitter("Twitter")
         } else {
             setCls3("img_src")
             setImagenes3(twitter1)
+            setTwitter("")
         }
     }
     const img4 = () => {
         if (cls4 == "img_src") {
             setCls4("img_src_click")
             setImagenes4(tick)
+            setFacebook("Facebook")
         } else {
             setCls4("img_src")
             setImagenes4(facebook1)
+            setFacebook("")
         }
     }
     const img5 = () => {
         if (cls5 == "img_src") {
             setCls5("img_src_click")
             setImagenes5(tick)
+            setYoutube("Youtube")
         } else {
             setCls5("img_src")
             setImagenes5(youtube1)
+            setYoutube("")
         }
     }
     const img6 = () => {
         if (cls6 == "img_src") {
             setCls6("img_src_click")
             setImagenes6(tick)
+            setGoogleMeet("Google Meet")
         } else {
             setCls6("img_src")
             setImagenes6(googleMeet1)
+            setGoogleMeet("")
         }
     }
 
+
+    const sendAsignaturas = () => {
+        const requestOptions = {
+            method: "POST",
+            headers: { "Content-type": "application/json"},
+            body: JSON.stringify({user: usuario, red1: whatsapp, red2: instagram, red3: twitter, red4: facebook, red5: youtube, red6: googlemeet })
+        }
+
+        fetch("interes", requestOptions)
+            .then((response) => response.json())
+            .then((res) => {
+
+            })
+    }
+
+    
 
     return (
             <div>
@@ -105,7 +154,7 @@ function Perfil(props) {
                     <div className="img_perfil">
                         <img className='imgRedonda' src={ramiro} alt="ramiro" />
                     </div>
-                    <h3 id="perfil">Bienvenido, Ramiro</h3>
+                    <h3 id="perfil">Bienvenido, {usuario}</h3>
                 </div>
                 <div className="categorias">
                     <h1 id="categorias_h1">Selecciona tus categorías</h1>
@@ -130,6 +179,7 @@ function Perfil(props) {
                         <img className={cls6} src={imagenes6} alt="googleMeet" onChange={(e) => setGoogleMeet(e.target.value)} onClick={() => img6()} />
                     </div>
                 </div>
+                <input type={"button"} className="boton_pe" onClick={() => sendAsignaturas()} value="ENVIAR"/>
             </div>
 
             )

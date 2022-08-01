@@ -29,24 +29,25 @@ const Login = () => {
             .then((response) => response.json())
             .then((res) => {
                 if (res.message) {
-                    window.location.assign("/")
+                    localStorage.setItem('user', telefono);
+                    window.location.assign("/perfil")
+
                 }
             })
     }
     return (
         <div className="padre_log">
-{/*             <Navbar />
- */}            <div className="accesoLogin">
+            {/* <Navbar /> */}
+            <div className="accesoLogin">
+
                 <h3 id="h3_login">Login</h3>
             </div>
             <div className="form_login">
                 <form className="formulario_login">
                     <label htmlFor="" id="label_login_telefono">Teléfono</label>
                     <input type={"telefono"} id="input_login_telefono" name="telefono" placeholder="" onChange={(e) => { setTelefono(e.target.value) }} />
-
                     <label htmlFor="" id="label_login_password">Password</label>
                     <input type={"password"} id="input_login_password" name="password" placeholder="" onChange={(e) => { setPassword(e.target.value) }} />
-
                     <label htmlFor="" id="label_login_privacidad"></label>
                     <input type={"checkbox"} id="input_login_privacidad" name="privacidad" placeholder="" onChange={(e) => { setPrivacidad(e.target.value) }} />He leido y acepto la política de privacidad
                     <input type={"button"} className="button_login_enviar" onClick={() => sendData()} value={"ENVIAR"} />
