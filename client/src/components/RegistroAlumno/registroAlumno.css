@@ -208,7 +208,17 @@
         justify-content: center;
     } */
 
+    #label_ra_check {
+        
+    }
+/*DESDE AQUI*/
+    #input_login_privacidad {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-family: 'Baloo Paaji 2', cursive;
+    }
 
+/*hasta aqui*/
     #boton_ra_enviar {
         border-style: none;
         background: #4A4D9B;
@@ -224,7 +234,7 @@
         width: 100%;
         color: #FFFFFF;
     }
-    #boton_ra_enviar:disabled{
+    .boton_ra_enviar:disabled{
         background: grey;
         box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
