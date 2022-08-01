@@ -18,6 +18,7 @@ const user = {
             const { nombre, apellidos, email, telefono, dni, codpostal, poblacion, provincia } = req.body
             console.log("REVISAR1")
 
+            const array = ['bien', 'bien', 'bien', 'bien', 'bien', 'bien', 'bien', 'bien']
             if (nombre.match(/^([a-zA-Z]{1,}\s?){1,6}$/) && apellidos.match(/^([a-zA-Z]{1,}\s?){1,6}$/) && email.match(/^[a-zA-Z0-9_\-\.~]{2,}@[a-zA-Z0-9_\-\.~]{2,}\.[a-zA-Z]{2,4}$/) && telefono.match(/[0-9]{9}/) && dni.match(/^[0-9]{8,8}[A-Za-z]$/) && codpostal.match(/[0-9]{5}/) && poblacion.match(/^([a-zA-Z]{1,}\s?){1,6}$/) && provincia.match(/^([a-zA-Z]{1,}\s?){1,6}$/)) {
                 dbo.collection("Alumnos").findOne({ dni: dni }, async function (err, result) {
                     if (err) throw err;
@@ -43,9 +44,32 @@ const user = {
 
                 });
             } else {
+                if (!nombre.match(/^([a-zA-Z]{1,}\s?){1,6}$/)) {
+                    array[0] = 'mal'
+                }
+                if (!apellidos.match(/^([a-zA-Z]{1,}\s?){1,6}$/)) {
+                    array[1] = 'mal'
+                }
+                if (!email.match(/^[a-zA-Z0-9_\-\.~]{2,}@[a-zA-Z0-9_\-\.~]{2,}\.[a-zA-Z]{2,4}$/)) {
+                    array[2] = 'mal'
+                }
+                if (!telefono.match(/[0-9]{9}/)) {
+                    array[3] = 'mal'
+                }
+                if (!dni.match(/^[0-9]{8,8}[A-Za-z]$/)) {
+                    array[4] = 'mal'
+                }
+                if (!codpostal.match(/[0-9]{5}/)) {
+                    array[5] = 'mal'
+                }
+                if (!poblacion.match(/^([a-zA-Z]{1,}\s?){1,6}$/)) {
+                    array[6] = 'mal'
+                }
+                if (!provincia.match(/^([a-zA-Z]{1,}\s?){1,6}$/)) {
+                    array[7] = 'mal'
+                }
                 res.json({
-
-                    message: 'mal'
+                    test: array
                 })
             }
 

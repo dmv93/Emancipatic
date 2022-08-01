@@ -1,322 +1,289 @@
-@media screen and (max-width: 420px) {
-    .formulario_ra {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #h2_ra {
-        font-family: 'Baloo Paaji 2';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 70px;
-        letter-spacing: 0.02em;
-        margin-left: 3%;
-        color: #1F3262;
-    }
-
-    #primera_ra {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 1em;
-    }
-
-    #label_ra_nombre {
-        font-family: 'Baloo Paaji 2';
-        font-style: normal;
-        font-weight: bold;
-        font-size: x-large;
-        line-height: 26px;
-        letter-spacing: 0.04em;
-        color: #1F3262;
-    }
-
-    #input_ra_nombre {
-        display: flex;
-        width: 290px;
-        height: 50px;
-        top: 59px;
-        font-size: large;
-    }
-
-    #label_ra_apellidos {
-        margin-top: 1em;
-        font-family: 'Baloo Paaji 2';
-
-        font-style: normal;
-        font-weight: bold;
-        font-size: x-large;
-        line-height: 26px;
-        letter-spacing: 0.04em;
-        color: #1F3262;
-    }
-
-    #input_ra_apellidos {
-        display: flex;
-        width: 290px;
-        height: 50px;
-        top: 59px;
-        font-size: large;
-    }
-
-    #segundo_ra {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 1em;
-    }
-
-    #label_ra_email {
-        font-family: 'Baloo Paaji 2';
-
-        font-style: normal;
-        font-weight: bold;
-        font-size: x-large;
-        line-height: 26px;
-        letter-spacing: 0.04em;
-        color: #1F3262;
-    }
-
-    #input_ra_email {
-        display: flex;
-        width: 290px;
-        height: 50px;
-        top: 59px;
-        font-size: large;
-    }
-
-    #label_ra_telefono {
-        margin-top: 1em;
-        font-family: 'Baloo Paaji 2';
-
-        font-style: normal;
-        font-weight: bold;
-        font-size: x-large;
-        line-height: 26px;
-        letter-spacing: 0.04em;
-        color: #1F3262;
-    }
-
-    #input_ra_telefono {
-        display: flex;
-        width: 290px;
-        height: 50px;
-        top: 59px;
-        font-size: large;
-    }
-
-    #tercero_ra {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 1em;
-    }
-
-    #label_ra_dni {
-        font-family: 'Baloo Paaji 2';
-
-        font-style: normal;
-        font-weight: bold;
-        font-size: x-large;
-        line-height: 26px;
-        letter-spacing: 0.04em;
-        color: #1F3262;
-    }
-
-    #input_ra_dni {
-        display: flex;
-        width: 290px;
-        height: 50px;
-        top: 59px;
-        font-size: large;
-    }
-
-    #label_ra_cp {
-        margin-top: 1em;
-        font-family: 'Baloo Paaji 2';
-
-        font-style: normal;
-        font-weight: bold;
-        font-size: x-large;
-        line-height: 26px;
-        letter-spacing: 0.04em;
-        color: #1F3262;
-    }
-
-    #input_ra_cp {
-        display: flex;
-        width: 290px;
-        height: 50px;
-        top: 59px;
-        font-size: large;
-    }
-
-
-    #cuarto_ra {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #label_ra_poblacion {
-        font-family: 'Baloo Paaji 2';
-
-        font-style: normal;
-        font-weight: bold;
-        font-size: x-large;
-        line-height: 26px;
-        letter-spacing: 0.04em;
-        color: #1F3262;
-    }
-
-    #input_ra_poblacion {
-        display: flex;
-        width: 290px;
-        height: 50px;
-        top: 59px;
-        font-size: large;
-    }
-
-    #label_ra_provincia {
-        margin-top: 1em;
-        font-family: 'Baloo Paaji 2';
-
-        font-style: normal;
-        font-weight: bold;
-        font-size: x-large;
-        line-height: 26px;
-        letter-spacing: 0.04em;
-        color: #1F3262;
-    }
-
-    #input_ra_provincia {
-        display: flex;
-        width: 290px;
-        height: 50px;
-        top: 59px;
-        font-size: large;
-    }
-
-    #quinto_ra {
-        display: flex;
-        margin-top: 1em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    /* #sexto_ra {
-        display: flex;
-        justify-content: center;
-    } */
-
-    #label_ra_check {
-        
-    }
-/*DESDE AQUI*/
-    #input_login_privacidad {
-        margin-top: 5%;
-        margin-bottom: 5%;
-        font-family: 'Baloo Paaji 2', cursive;
-    }
-
-/*hasta aqui*/
-    #boton_ra_enviar {
-        border-style: none;
-        background: #4A4D9B;
-        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
-        font-family: 'Baloo Paaji 2';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 26px;
-        height: 50px;
-        letter-spacing: 0.04em;
-        width: 100%;
-        color: #FFFFFF;
-    }
-    .boton_ra_enviar:disabled{
-        background: grey;
-        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
-        font-family: 'Baloo Paaji 2';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 26px;
-        height: 50px;
-        letter-spacing: 0.04em;
-        width: 100%;
-        color: #FFFFFF;
-    }
+.form_ra {
+    display: flex;
+    width: 100% !important;
+    margin: 0% !important;
+    box-shadow: none !important;
 }
 
-@media screen and (min-width: 1200px) {
+#caja {
+    margin-left: 0 !important;
 
-    #h2_ra {
-        font-family: 'Baloo Paaji 2';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 70px;
-        letter-spacing: 0.04em;
-        margin-left: 3%;
-        color: #1F3262;
-    }
+    width: 100% !important;
+}
 
-    #input_ra_nombre,
-    #input_ra_apellidos,
-    #input_ra_email,
-    #input_ra_telefono,
-    #input_ra_dni,
-    #input_ra_codpostal,
-    #input_ra_poblacion,
-    #input_ra_provincia {
-        box-sizing: border-box;
-        border: 1px solid #B5B5B5;
-        filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.25));
-        border-radius: 5px;
-        font-family: 'Baloo Paaji';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 26px;
-        letter-spacing: 0.04em;
-        color: #1F3262;
-    }
+.contenido {
+    margin-left: 3% !important;
+}
 
-    label {
-        font-family: 'Baloo Paaji 2';
+.contenidoB {
+    margin-top: 10% !important;
+    margin-left: 12% !important;
+}
 
-        font-style: normal;
-        font-weight: bold;
-        font-size: 15px;
-        line-height: 26px;
-        letter-spacing: 0.04em;
-        color: #1F3262;
-    }
+#h1_ra {
+    font-family: 'Baloo Paaji 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 70px;
+    letter-spacing: 0.04em;
 
-    .formulario_ra {
-        display: flex;
-        width: 40%;
-        flex-wrap: wrap;
-        background-color: white;
-        background-color: rgb(255, 255, 255);
-        margin-left: 10%;
-        margin-top: 2%;
-        border-radius: 8px;
-        box-shadow: 0 10px 25px rgb(82 105 112);
-    }
+    color: #1F3262;
+}
 
-    #primera_ra,
-    #segundo_ra,
-    #tercero_ra,
-    #cuarto_ra {
-        display: block;
-        position: relative;
-        width: calc(90%);
-        height: auto;
-        margin: 10px auto;
-        padding: 30px 10px 10px;
 
-    }
+#h1_ra {
+
+    font-family: 'Baloo Paaji 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 70px;
+    letter-spacing: 0.02em;
+    margin-left: 3%;
+    color: #1F3262;
+}
+
+a {
+    color: blue;
+}
+
+.contenidoB {
+    margin: 3%;
+    margin-top: 3%;
+    margin-left: 25%;
+}
+
+#input_ra_nombre,
+#input_ra_email,
+#input_ra_dni,
+#input_ra_poblacion,
+#input_ra_apellidos,
+#input_ra_telefono,
+#input_ra_codpostal,
+#input_ra_provincia {
+    box-sizing: border-box;
+    border: 1px solid #B5B5B5;
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+    font-family: 'Baloo Paaji';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #1F3262;
+}
+
+#input_ra_nombre_mal,
+#input_ra_email_mal,
+#input_ra_dni_mal,
+#input_ra_poblacion_mal,
+#input_ra_apellidos_mal,
+#input_ra_telefono_mal,
+#input_ra_codpostal_mal,
+#input_ra_provincia_mal {
+    box-sizing: border-box;
+    border: 2px solid red;
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+    font-family: 'Baloo Paaji';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #1F3262;
+}
+
+#input_ra_nombre_bien,
+#input_ra_email_bien,
+#input_ra_dni_bien,
+#input_ra_poblacion_bien,
+#input_ra_apellidos_bien,
+#input_ra_telefono_bien,
+#input_ra_codpostal_bien,
+#input_ra_provincia_bien {
+    box-sizing: border-box;
+    border: 2px solid green;
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+    font-family: 'Baloo Paaji';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #1F3262;
+}
+
+
+
+#label_ra_nombre,
+#label_ra_email,
+#label_ra_dni,
+#label_ra_poblacion,
+#label_ra_apellidos,
+#label_ra_telefono,
+#label_ra_codpostal,
+#label_ra_provincia {
+    font-family: 'Baloo Paaji 2';
+    font-style: normal;
+    font-weight: bold;
+    font-size: x-large;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #1F3262;
+}
+
+#label_ra_check {
+    color: grey;
+    font-size: 10px;
+    ;
+}
+
+
+.form_ra {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    flex-wrap: wrap;
+    background-color: white;
+    background-color: rgb(255, 255, 255);
+    margin-left: 10%;
+    margin-top: 2%;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgb(82 105 112);
+}
+
+#caja {
+    display: flex;
+
+}
+
+
+.logoF {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10%;
+    padding: 10%;
+    border-style: solid;
+    border-color: grey;
+    border-width: 5px
+}
+
+.logoC {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10%;
+    padding: 10%;
+    border-style: solid;
+    background-color: #E3F1F4;
+    border-color: #49BCC4;
+    border-width: 5px;
+}
+
+.logo {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.logo:checked {
+    background-color: lightblue;
+}
+
+#boton_ra_enviar {
+    border-style: none;
+    background: #4A4D9B;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-family: 'Baloo Paaji 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    height: 50px;
+
+    letter-spacing: 0.04em;
+    width: 100%;
+
+    color: #FFFFFF;
+}
+
+#boton_ra_enviar:disabled {
+    background: grey;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-family: 'Baloo Paaji 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    height: 50px;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+.contenido {
+    display: flex;
+    position: relative;
+    width: calc(90%);
+    height: auto;
+    margin: 10px auto;
+    padding: 30px 10px 10px;
+
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 180px 180px;
+    grid-template-rows: 180px 180px 180px;
+}
+
+.contenidoI {
+    border-radius: 10px;
+    width: 100%;
+    padding: 4%;
+
+}
+
+
+
+div .contenido input {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+div .contenido label {
+    display: block;
+    position: absolute;
+    width: auto;
+    top: 0px;
+    left: 5px;
+
+    padding: 5px 5px;
+    border-radius: 20px;
+}
+
+.privacidad_checkbox {
+    font-family: 'Baloo Paaji 2';
+    font-weight: bolder;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#color_blue {
+    color: blue;
+}
+
+#politica_privapcidad{
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    margin-left: 5px;
 }
