@@ -13,6 +13,7 @@ import LoginFormador from "../components/logInFormador/logInFormador"
 import Perfil from "../components/Perfil/Perfil";
 import ProfesoresRecomendados from "../components/ProfesoresRecomendados/ProfesoresRecomendados";
 import TuProfesor from "../components/TuProfesor/TuProfesor";
+import PerfilProfesor from "../components/perfilProfesor/perfilProfesor";
 
 
 class Main extends Component {
@@ -30,6 +31,7 @@ class Main extends Component {
                     <Route path="/perfil" element={<Perfil />} />
                     <Route path="/profesoresrecomendados" element={<ProfesoresRecomendados />} />
                     <Route path="/tuprofesor" element={<TuProfesor />} />
+                    <Route path="/perfilProfesor" element={<PerfilProfesor />} />
                 </Routes>
                 <Footer />
             </div>

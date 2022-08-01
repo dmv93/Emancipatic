@@ -18,6 +18,7 @@ import './components/Perfil/Perfil.css';
 import './components/Navbar.css';
 import './components/ProfesoresRecomendados/ProfesoresRecomendados.css'
 import './components/TuProfesor/TuProfesor.css'
+import './components/perfilProfesor/perfilProfesor.css'
 
 function App() {
   return (

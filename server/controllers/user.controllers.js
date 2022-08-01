@@ -63,15 +63,14 @@ const user = {
 
 
             const array = ['bien', 'bien', 'bien', 'bien', 'bien', 'bien', 'bien', 'bien']
-            console.log(!poblacion.match(/^[A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']?$/))
+            // console.log(!poblacion.match(/^[A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']?$/))
 
             if (nombre.match(/^([a-zA-Z]{1,}\s?){1,6}$/) && apellidos.match(/^([a-zA-Z]{1,}\s?){1,6}$/) && email.match(/^[a-zA-Z0-9_\-\.~]{2,}@[a-zA-Z0-9_\-\.~]{2,}\.[a-zA-Z]{2,4}$/) && telefono.match(/[0-9]{9}/) && dni.match(/^[0-9]{8,8}[A-Za-z]$/) && codpostal.match(/[0-9]{5}/) && poblacion.match(/^([a-zA-Z]{1,}\s?){1,6}$/) && provincia.match(/^([a-zA-Z]{1,}\s?){1,6}$/)) {
-                console.log('hola')
                 dbo.collection("Formadores").findOne({ dni: functions.SHA1(req.body.dni) }, async function (err, result) {
                     if (err) throw err;
 
                     if (result == null) {
-                        const myobj = { "nombre": req.body.nombre, "apellidos": req.body.apellidos, "email": req.body.email, "telefono": req.body.telefono, "dni": functions.SHA1(req.body.dni), "codpostal": req.body.codpostal, "poblacion": req.body.poblacion, "provincia": req.body.provincia, "asignaturas": [await req.body.red1, await req.body.red2, await req.body.red3, await req.body.red4, await req.body.red5, await req.body.red6] };
+                        const myobj = { "nombre": req.body.nombre, "apellidos": req.body.apellidos, "email": req.body.email, "telefono": req.body.telefono, "dni": functions.SHA1(req.body.dni), "codpostal": req.body.codpostal, "poblacion": req.body.poblacion, "provincia": req.body.provincia };
                         dbo.collection("Formadores").insertOne(myobj, async function (err, result1) {
                             if (err) throw err;
                             console.log("Formador insertado")
@@ -170,14 +169,12 @@ const user = {
         MongoClient.connect(url, async function (err, db) {
             if (err) throw err
             var dbo = db.db(mydb);
-
-
-
-
             const myobj = { "telefono": req.body.telefono }
 
             dbo.collection("Formadores").findOne(myobj, async function (err, result) {
                 if (err) throw err
+                console.log(result)
+                console.log(functions.SHA1(req.body.dni))
                 if (result.dni == functions.SHA1(req.body.dni)) {
                     console.log("Formador autenticado")
                     res.json({
@@ -239,7 +236,51 @@ const user = {
                 }
             });
         })
+    },
 
+    nombreFormador: (req, res) => {
+        MongoClient.connect(url, async function (err, db) {
+            if (err) throw err
+            var dbo = db.db(mydb);
+
+            const myobj = { telefono: (req.body.telefono).toString() }
+            dbo.collection("Formadores").findOne(myobj, async function (err, result) {
+                if (err) throw err
+                if(result != null){
+                    res.json({
+                        data: result.nombre,
+                        message: true
+                    })
+                }
+            });
+        })
+    },
+
+    
+    asignaturasFormador: (req, res) => {
+        console.log(req.body)
+        MongoClient.connect(url, async function (err, db) {
+            if (err) throw err
+            var dbo = db.db(mydb);
+
+            const myobj = { nombre: req.body.userFormador }
+            console.log(myobj)
+            dbo.collection("Formadores").findOne(myobj, async function (err, result1) {
+                if (err) throw err
+                console.log(result1)
+
+                if (result1 != null) {
+                    dbo.collection("Formadores").updateOne({telefono: result1.telefono}, {$set:{asignaturas: [req.body.red1,req.body.red2,req.body.red3,req.body.red4,req.body.red5,req.body.red6]}}, async function (err, result2) {
+                        if (err) throw err                        
+                        console.log(result2)
+                    });
+                    // res.json({
+                    //     data: result1.nombre,
+                    //     message: true
+                    // })
+                }
+            });
+        })  
     }
 };
 
