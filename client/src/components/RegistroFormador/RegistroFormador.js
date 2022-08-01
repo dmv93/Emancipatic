@@ -210,7 +210,6 @@ function RegistroFormador(props) {
                         <label id="label_rf_poblacion">¿Qué temas puedes enseñar?</label>
                         <input id="input_rf_poblacion" value={`${whatsapp} ${instagram} ${twitter} ${facebook} ${youtube} ${googleMeet}`}></input>
 
-
                     </div>
 
                     <div className="contenedor">

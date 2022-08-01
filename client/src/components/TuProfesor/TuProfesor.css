@@ -1,0 +1,117 @@
+@media screen and (max-width: 420px) {
+
+
+    .contendor2{
+        width: 100%;
+      }
+  
+      
+      .imgRedonda1 {
+        margin-top: 10%;
+        width:150px;
+        height:150px;
+        border-radius:150px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #perfil1{
+        color: #4A4D9B;;
+        font-family: 'Baloo Paaji 2', cursive;
+        font-size: 35px;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    #mentora{
+        font-family: 'Baloo Paaji 2', cursive;
+        font-size: 25px;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .boton_enviar{
+        display: flex;
+        justify-content: center;
+        margin: 5%;
+    }
+
+    .button_enviar{
+        width: 80%;
+        border-radius: 15px;
+        color: white;
+        background-color: #4A4D9B;
+        height: 40px;
+        font-family: 'Baloo Paaji 2';
+        font-size: 20px;
+        border-style: none;
+    }
+
+    .contendor_valoracion1{
+        width: 356px;;
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+        border-radius: 15px;
+        border: 3px solid #4A4D9B;
+        padding: 3%;
+        margin-left: 16px;
+    }
+
+    #valoracion{
+        color: #4A4D9B;;
+        font-family: 'Baloo Paaji 2', cursive;
+        font-size: 35px;
+        font-weight: bolder; 
+        display: flex;
+        justify-content: center;
+    }
+
+    .valoracion1{
+        display: flex;
+        justify-content: center;
+    }
+
+    #tamaño{
+        font-size: 30px;
+    }
+
+    .texto{
+        margin: 8%;
+        width: 356px;;
+        color: #4A4D9B;
+        font-size: 20px;
+    }
+
+    .rrss_tuprofesor{
+        width: 356px;;
+        padding: 10%;
+        margin-left: 16px;
+        margin-left: 16px;
+        border-radius: 15px;
+        border-style: solid;
+        border-color:  #49BCC4;
+        background-color: #E3F1F4;
+    }
+
+    .selecciona_categorias_profesores1{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 70px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

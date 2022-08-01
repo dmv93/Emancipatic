@@ -17,6 +17,7 @@ import './components/RegistroAlumno/registroAlumno.css';
 import './components/Perfil/Perfil.css';
 import './components/Navbar.css';
 import './components/ProfesoresRecomendados/ProfesoresRecomendados.css'
+import './components/TuProfesor/TuProfesor.css'
 
 function App() {
   return (

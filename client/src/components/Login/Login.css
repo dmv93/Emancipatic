@@ -27,6 +27,19 @@
         padding: 10%;
     }
 
+    #label_login_telefono{
+        color: #1F3262;
+        font-size: 15px;
+        font-family: 'Baloo Paaji 2', cursive;
+    }
+
+    #label_login_password{
+        color: #1F3262;
+        font-family: 'Baloo Paaji 2', cursive;
+        margin-top: 4%;
+        font-size: 15px;
+    }
+
     .button_login_enviar{
         margin-top: 1em;
         width: 290px;
