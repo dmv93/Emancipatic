@@ -154,7 +154,7 @@ function PerfilProfesor() {
                     <div className="img_perfil">
                         <img className='imgRedonda' src={ramiro} alt="ramiro" />
                     </div>
-                    <h3 id="perfil">Bienvenido, {profesor}</h3>
+                    <h3 id="perfil">Bienvenido, Ramiro {profesor}</h3>
                 </div>
                 <div className="categorias">
                     <h1 id="categorias_h1">Selecciona tus categorías</h1>
