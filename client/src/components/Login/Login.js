@@ -50,13 +50,6 @@ const Login = () => {
                 </div>
             </div>
 
-                <div className="tarjeta2">
-                    <div className="texto1">
-                        <p>Hola,¿como estás?</p>
-                        <p>Soy Susana,</p>
-                        <p>encantada</p>
-                    </div>
-                </div>  
             </div>
                     <label htmlFor="" id="label_login_password">Password</label>
                     <input type={"password"} id="input_login_password" name="password" placeholder="" onChange={(e) => { setPassword(e.target.value) }} />

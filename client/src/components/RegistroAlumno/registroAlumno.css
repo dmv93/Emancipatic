@@ -23,26 +23,13 @@
 #h1_ra {
     font-family: 'Baloo Paaji 2';
     font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 70px;
-    letter-spacing: 0.04em;
-
-    color: #1F3262;
-}
-
-
-#h1_ra {
-
-    font-family: 'Baloo Paaji 2';
-    font-style: normal;
-    font-weight: 400;
     font-size: 35px;
     line-height: 70px;
     letter-spacing: 0.02em;
     margin-left: 3%;
     color: #1F3262;
 }
+
 
 a {
     color: blue;
