@@ -13,6 +13,13 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const [privacidad, setPrivacidad] = useState("");
 
+    const  politica = () => {
+        if (privacidad == "") {
+            setPrivacidad("true")
+        } else {
+            setPrivacidad("")
+        }
+    }
 
     const sendData = () => {
 
@@ -46,11 +53,13 @@ const Login = () => {
                 <form className="formulario_login">
                     <label htmlFor="" id="label_login_telefono">Teléfono</label>
                     <input type={"telefono"} id="input_login_telefono" name="telefono" placeholder="" onChange={(e) => { setTelefono(e.target.value) }} />
+
                     <label htmlFor="" id="label_login_password">Password</label>
                     <input type={"password"} id="input_login_password" name="password" placeholder="" onChange={(e) => { setPassword(e.target.value) }} />
+
                     <label htmlFor="" id="label_login_privacidad"></label>
-                    <input type={"checkbox"} id="input_login_privacidad" name="privacidad" placeholder="" onChange={(e) => { setPrivacidad(e.target.value) }} />He leido y acepto la política de privacidad
-                    <input type={"button"} className="button_login_enviar" onClick={() => sendData()} value={"ENVIAR"} />
+                    <input type={"checkbox"} id="input_login_privacidad" name="privacidad" placeholder="" onClick={() => politica()} />He leido y acepto la política de privacidad
+                    {telefono && password && privacidad ? <input type={"button"} className="button_login_enviar" onClick={() => sendData()} value={"ENVIAR"} /> : <input type={"button"} className="button_login_enviar2" onClick={() => sendData()} value={"ENVIAR"} disabled/>}
                 </form>
             </div>
         </div>

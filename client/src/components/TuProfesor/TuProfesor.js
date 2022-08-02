@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar";
 
-import ramiro from '../../assets/ramiro.png'
+import jessica from '../../assets/jessica.webp'
+import sabervivir from '../../assets/sabervivir.jpg'
+import ian from '../../assets/ian.webp'
 import whatsApp from '../../assets/whatsApp.png'
 import instagram1 from '../../assets/instagram1.png'
 import twitter1 from '../../assets/twitter1.png'
@@ -14,6 +16,7 @@ const TuProfesor = () => {
 
     const [enviar, setEnviar] = useState("");
     const [nombreProfe, setNombreProfe] = useState("")
+    const [fotoProfe, setFotoProfe] = useState("")
 
     //ASIGNATURAS
 
@@ -27,13 +30,18 @@ const TuProfesor = () => {
     const [idAsignatura2, setIdAsignatura2] = useState("")
     const [idAsignatura3, setIdAsignatura3] = useState("")
 
+    const navigate = useNavigate();
 
 
+    const enviarChat = () => {
+        navigate("/chat")
+    }
 
 
     useEffect(() => {
 
         setNombreProfe(localStorage.getItem("nombreProfesor"))
+        console.log(nombreProfe)
 
         const requestOptions = {
             method: "POST",
@@ -89,6 +97,14 @@ const TuProfesor = () => {
                 } else if(asignatura3 == 'Facebook'){
                     setIdAsignatura3(facebook1)
                 }
+
+                if (nombreProfe == "Gustavo") {
+                    setFotoProfe(ian)
+                } else if (nombreProfe == "Jessica") {
+                    setFotoProfe(jessica)
+                } else if (nombreProfe == "Sergio") {
+                    setFotoProfe(sabervivir)
+                }
             })
     },)
 
@@ -98,13 +114,13 @@ const TuProfesor = () => {
             <Navbar />
             <div className="contenedor2">
                 <div className="img_perfil">
-                    <img className='imgRedonda1' src={ramiro} alt="ramiro" />
+                    <img className='imgRedonda1' src={fotoProfe} alt="ramiro" />
                 </div>
                 <h3 id="perfil1">{nombreProfe}</h3>
                 <h4 id="mentora">Será tu mentor</h4>
             </div>
             <div className="boton_enviar">
-                <input type={"button"} className="button_enviar" onClick={() => setEnviar()} value={"Enviar Mensaje"} />
+                <input type={"button"} className="button_enviar" onClick={() => enviarChat()} value={"Enviar Mensaje"} />
             </div>
             <div className="contendor_valoracion1">
                 <h1 id="valoracion">Valórame</h1>

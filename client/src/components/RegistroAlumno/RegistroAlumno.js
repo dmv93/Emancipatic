@@ -61,35 +61,39 @@ const RegistroAlumno = () => {
                 setInputPoblacion("input_ra_poblacion_bien")
                 setInputProvincia("input_ra_provincia_bien")
 
-                if (res.test[0] == 'mal') {
+                if(res.message) {
+                    navigate("/login")
+                } else {
+                    if (res.test[0] == 'mal') {
 
-                    setInputNombre("input_ra_nombre_mal")
-
-                }
-                if (res.test[1] == 'mal') {
-
-                    setInputApellidos("input_ra_apellidos_mal")
-
-                }
-                if (res.test[2] == 'mal') {
-                    setInputEmail("input_ra_email_mal")
-
-                }
-                if (res.test[3] == 'mal') {
-                    setInputTelefono("input_ra_telefono_mal")
-
-                }
-                if (res.test[4] == 'mal') {
-                    setInputDni("input_ra_dni_mal")
-                }
-                if (res.test[5] == 'mal') {
-                    setInputCodpostal("input_ra_codpostal_mal")
-                }
-                if (res.test[6] == 'mal') {
-                    setInputPoblacion("input_ra_poblacion_mal")
-                }
-                if (res.test[7] == 'mal') {
-                    setInputProvincia("input_ra_provincia_mal")
+                        setInputNombre("input_ra_nombre_mal")
+    
+                    }
+                    if (res.test[1] == 'mal') {
+    
+                        setInputApellidos("input_ra_apellidos_mal")
+    
+                    }
+                    if (res.test[2] == 'mal') {
+                        setInputEmail("input_ra_email_mal")
+    
+                    }
+                    if (res.test[3] == 'mal') {
+                        setInputTelefono("input_ra_telefono_mal")
+    
+                    }
+                    if (res.test[4] == 'mal') {
+                        setInputDni("input_ra_dni_mal")
+                    }
+                    if (res.test[5] == 'mal') {
+                        setInputCodpostal("input_ra_codpostal_mal")
+                    }
+                    if (res.test[6] == 'mal') {
+                        setInputPoblacion("input_ra_poblacion_mal")
+                    }
+                    if (res.test[7] == 'mal') {
+                        setInputProvincia("input_ra_provincia_mal")
+                    }
                 }
             })
     };
@@ -155,7 +159,7 @@ const RegistroAlumno = () => {
                     </div>
                     <br />
                     <br />
-                    {nombre && apellidos && email && telefono && dni && codpostal && poblacion && provincia  && policy ? <button className="button_login_enviar"  onClick={() => sendDataAlumno()} >ENVIAR</button> : <button id="boton_rf_enviar" onClick={() => sendDataAlumno()} disabled>ENVIAR</button>}
+                    {nombre && apellidos && email && telefono && dni && codpostal && poblacion && provincia  && policy ? <button className="button_login_enviar"  onClick={() => sendDataAlumno()} >ENVIAR</button> : <button id="boton_ra_enviar" onClick={() => sendDataAlumno()} disabled>ENVIAR</button>}
                 </div>
             </div>
         </div>
