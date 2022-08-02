@@ -44,8 +44,20 @@ const Login = () => {
             </div>
             <div className="form_login">
                 <form className="formulario_login">
-                    <label htmlFor="" id="label_login_telefono">Teléfono</label>
-                    <input type={"telefono"} id="input_login_telefono" name="telefono" placeholder="" onChange={(e) => { setTelefono(e.target.value) }} />
+             <div className="chat_contenedor">
+                <div className="tarjeta">
+                    <div className="img_perfil">
+                </div>
+            </div>
+
+                <div className="tarjeta2">
+                    <div className="texto1">
+                        <p>Hola,¿como estás?</p>
+                        <p>Soy Susana,</p>
+                        <p>encantada</p>
+                    </div>
+                </div>  
+            </div>
                     <label htmlFor="" id="label_login_password">Password</label>
                     <input type={"password"} id="input_login_password" name="password" placeholder="" onChange={(e) => { setPassword(e.target.value) }} />
                     <label htmlFor="" id="label_login_privacidad"></label>

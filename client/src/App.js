@@ -19,6 +19,7 @@ import './components/Navbar.css';
 import './components/ProfesoresRecomendados/ProfesoresRecomendados.css'
 import './components/TuProfesor/TuProfesor.css'
 import './components/perfilProfesor/perfilProfesor.css'
+import './components/Chat/Chat.css'
 
 function App() {
   return (

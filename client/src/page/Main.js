@@ -14,6 +14,7 @@ import Perfil from "../components/Perfil/Perfil";
 import ProfesoresRecomendados from "../components/ProfesoresRecomendados/ProfesoresRecomendados";
 import TuProfesor from "../components/TuProfesor/TuProfesor";
 import PerfilProfesor from "../components/perfilProfesor/perfilProfesor";
+import Chat from "../components/Chat/Chat";
 
 
 class Main extends Component {
@@ -32,6 +33,8 @@ class Main extends Component {
                     <Route path="/profesoresrecomendados" element={<ProfesoresRecomendados />} />
                     <Route path="/tuprofesor" element={<TuProfesor />} />
                     <Route path="/perfilProfesor" element={<PerfilProfesor />} />
+                    <Route path="/chat" element={<Chat />} />
+
                 </Routes>
                 <Footer />
             </div>
