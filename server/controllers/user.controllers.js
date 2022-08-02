@@ -324,6 +324,29 @@ const user = {
                 // db.close();
             });
         }) 
+    },
+
+
+    asignaturasValoracion: (req, res) => {
+        console.log(req.body)
+        MongoClient.connect(url, async function (err, db) {
+            if (err) throw err
+            var dbo = db.db(mydb);
+
+            const myobj = { nombre: req.body.nombre }
+            console.log(myobj)
+
+            dbo.collection("Formadores").findOne(myobj, async function (err, result1) {
+                if (err) throw err
+                console.log(result1)
+
+                if (result1 != null) {
+                    res.json({
+                        data: result1
+                    })
+                }
+            });
+        }) 
     }
     
 };

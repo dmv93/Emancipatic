@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import Navbar from "../Navbar";
 
 // import ramiro from '../../assets/ramiro.png'
-import ian from '../../assets/ian.jpg'
+import ian from '../../assets/ian.webp'
 import jessica from '../../assets/jessica.webp'
 import sabervivir from '../../assets/sabervivir.jpg'
 import whatsApp from '../../assets/whatsApp.png'
 import instagram1 from '../../assets/instagram1.png'
 import twitter1 from '../../assets/twitter1.png'
 import facebook1 from '../../assets/facebook1.png'
+
 
 const ProfesoresRecomendados = () => {
 
@@ -66,7 +67,23 @@ const ProfesoresRecomendados = () => {
     const [idAsignatura9, setIdAsignatura9] = useState("")
 
 
+    let navigate = useNavigate()
 
+
+    const profesor1 = () => {
+        localStorage.setItem("nombreProfesor", formador1)
+        navigate("/tuprofesor");
+    }
+
+    const profesor2 = () => {
+        localStorage.setItem("nombreProfesor", formador2)
+        navigate("/tuprofesor");
+    }
+
+    const profesor3 = () => {
+        localStorage.setItem("nombreProfesor", formador3)
+        navigate("/tuprofesor");
+    }
 
     useEffect(() => {
 
@@ -290,25 +307,15 @@ const ProfesoresRecomendados = () => {
                 }
             })
 
-        //FETCH PARA ASIGNATURAS
-        // fetch("asignaturasMostrar",{ method: "POST" })
-        //     .then((response) => response.json())
-        //     .then((res) => {
+    },)
 
-        //     })
-
-    }, [])
-
-    console.log(formador1)
-    console.log(estrella1)
-    console.log(asignatura1)
 
     return (
         <div>
             <Navbar />
             <div className="contendor_profesor">
                 <h3 id="perfil">Profesores recomendados</h3>
-                <div className="contendor_perfil_profesores">
+                <div className="contendor_perfil_profesores" id="profesor1" onClick={() => profesor1()}>
                     <div className="tarjeta">
                         <img className='imgRedonda1' src={ian} alt="ramiro" />
                         <h3 id="perfil_profesor">{formador1}</h3>
@@ -343,9 +350,9 @@ const ProfesoresRecomendados = () => {
                 </div>
             </div>
 
-            <div className="contendor_perfil_profesores">
+            <div className="contendor_perfil_profesores" id="profesor2" onClick={() => profesor2()}>
                 <div className="tarjeta">
-                    <img className='imgRedonda1' src={jessica} alt="ramiro" />
+                    <img className='imgRedonda1' src={jessica} alt="jessica" />
                     <h3 id="perfil_profesor">{formador2}</h3>
                 </div>
                 <div className="valoracion">
@@ -377,7 +384,7 @@ const ProfesoresRecomendados = () => {
                 </div>
             </div>
 
-            <div className="contendor_perfil_profesores">
+            <div className="contendor_perfil_profesores" id="profesor3" onClick={() => profesor3()}>
                 <div className="tarjeta">
                     <img className='imgRedonda1' src={sabervivir} alt="ramiro" />
                     <h3 id="perfil_profesor">{formador3}</h3>
