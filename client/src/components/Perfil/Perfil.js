@@ -22,6 +22,8 @@ function Perfil(props) {
     const [usuario, setNombreUsuario] = useState("");
     const [telefonoUser, setTelefonoUser] = useState("");
 
+    let navigate = useNavigate();
+
 
     const [whatsapp, setWhatsapp] = useState("");
     const [cls1, setCls1] = useState("img_src");
@@ -141,7 +143,9 @@ function Perfil(props) {
         fetch("interes", requestOptions)
             .then((response) => response.json())
             .then((res) => {
-
+                if(res.message){
+                    navigate("/profesoresrecomendados");
+                }
             })
     }
 
@@ -149,7 +153,7 @@ function Perfil(props) {
 
     return (
             <div>
-                <Navbar />
+                <Navbar color="transparent" border="transparent"/>
                 <div className="contenedor1">
                     <div className="img_perfil">
                         <img className='imgRedonda' src={ramiro} alt="ramiro" />
@@ -179,7 +183,9 @@ function Perfil(props) {
                         <img className={cls6} src={imagenes6} alt="googleMeet" onChange={(e) => setGoogleMeet(e.target.value)} onClick={() => img6()} />
                     </div>
                 </div>
-                <input type={"button"} className="boton_pe" onClick={() => sendAsignaturas()} value="ENVIAR"/>
+                <div className="boton_perfil">
+                    <input type={"button"} className="boton_pe" onClick={() => sendAsignaturas()} value="ENVIAR"/>
+                </div>
             </div>
 
             )
