@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Navbar() {
+function Navbar(props) {
 
     const [atras, setAtras] = useState("");
     const [menu, setMenu] = useState("");
@@ -8,7 +8,7 @@ function Navbar() {
     return (
         <div className="nav_nav">
             <div className="navbar">
-                <input type={"button"} className="button_navbar_atras" onClick={() => setAtras()} value={"ATRÁS"} />
+                <input type={"button"} className="button_navbar_atras" style={{color: props.color, border: props.border}} onClick={() => setAtras()} value={"ATRÁS"} />
                 <div class="dropdown">
                     <input type={"button"} className="button_navbar_atrass" onClick={() => setMenu()} value={"MENU"} />
                     <div class="dropdown-content">

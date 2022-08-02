@@ -1,7 +1,7 @@
 @media screen and (max-width: 420px) {
 
     .padre_log {
-        margin-bottom: 270px;
+        margin-bottom: 77px;
     }
 
     #h3_login {
@@ -9,7 +9,7 @@
         width: 450px;
         height: 75px;
         left: 20%;
-        top: 150px;
+        top: 125px;
         font-family: 'Baloo Paaji 2';
         font-size: 50px;
         line-height: 35px;
@@ -51,7 +51,26 @@
         font-family: 'Baloo Paaji 2';
         font-style: normal;
         font-weight: 400;
-        font-size: 15px;
+        font-size: x-large;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        color: #FFFFFF;
+        width: 100%;
+        font-family: 'Baloo Paaji 2', cursive;
+    }
+
+    .button_login_enviar2:disabled {
+        margin-top: 1em;
+        width: 290px;
+        height: 60px;
+        background: grey;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        border-style: none;
+        font-family: 'Baloo Paaji 2';
+        font-style: normal;
+        font-weight: 400;
+        font-size: x-large;
         line-height: 26px;
         letter-spacing: 0.04em;
         color: #FFFFFF;
@@ -67,6 +86,8 @@
         border-radius: 5px;
         margin-top: 1em;
         height: 60px;
+        font-size: large;
+        margin-bottom: 1em;
     }
 
     #label_login_telefono {
@@ -102,6 +123,7 @@
         border-radius: 5px;
         margin-top: 1em;
         height: 60px;
+        font-size: large;
     }
 }
 

@@ -30,7 +30,7 @@ const user = {
                             console.log("Alumno insertado")
                             res.json({
                                 data: result1,
-                                message: 'bien'
+                                message: true,
                             })
 
                         });
@@ -252,6 +252,9 @@ const user = {
                     dbo.collection("Alumnos").updateOne({telefono: result1.telefono}, {$set:{asignaturas: [req.body.red1,req.body.red2,req.body.red3,req.body.red4,req.body.red5,req.body.red6]}}, async function (err, result2) {
                         if (err) throw err                        
                         console.log(result2)
+                        res.json({
+                            message: true,
+                        })
                     });
                     // res.json({
                     //     data: result1.nombre,
