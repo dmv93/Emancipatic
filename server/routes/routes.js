@@ -12,6 +12,7 @@ router.post("/informacionAlumno", user.informacionAlumno);
 router.post("/nombreFormador", user.nombreFormador);
 router.post("/asignaturasFormador", user.asignaturasFormador);
 router.post("/valoracionFormador", user.valoracionFormador);
+router.post("/asignaturasValoracion", user.asignaturasValoracion);
 
 
 module.exports = router;
