@@ -21,6 +21,8 @@ import './components/TuProfesor/TuProfesor.css';
 import './components/perfilProfesor/perfilProfesor.css';
 import './components/Chat/Chat.css';
 import './components/tusAlumnos/tusAlumnos.css';
+import './components/tuAlumno/tuAlumno.css';
+
 
 function App() {
   return (

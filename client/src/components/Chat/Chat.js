@@ -1,37 +1,55 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar";
 
-import ramiro from '../../assets/ramiro.png'
 import botonchat from '../../assets/botonchat.png'
+import ian from '../../assets/ian.webp'
+import jessica from '../../assets/jessica.webp'
+import sabervivir from '../../assets/sabervivir.jpg'
+
+
 function Chat() {
 
 
     const [chat, setChat] = useState("");
     const [chatVisible, setChatVisible] = useState("tarjetacolor");
+    const [ nombreProfe, setNombreProfe] = useState("")
+    const [fotoProfe, setFotoProfe] = useState("")
 
     const chatEnviar = () => {
         setChatVisible("tarjetacolorvisible")
     }
 
+    useEffect(() => {
+        setNombreProfe(localStorage.getItem("nombreProfesor"))
+        setFotoProfe(localStorage.getItem("nombreProfesor"))
+        if (nombreProfe == "Gustavo") {
+            setFotoProfe(ian)
+        } else if (nombreProfe == "Jessica") {
+            setFotoProfe(jessica)
+        } else if (nombreProfe == "Sergio") {
+            setFotoProfe(sabervivir)
+        }
+
+    })
 
     return (
         <div>
             <Navbar />
             <div className="nombre">
-                <h1 id="nombre">Susana Pérez</h1>
+                <h1 id="nombre">{nombreProfe}</h1>
             </div>
-            <div className="chat_contenedor">
+            <div className="chat_contenedor1">
                 <div className="chat">
                     <div className="img_perfil">
-                        <img className='imgRedonda2' src={ramiro} alt="ramiro" />
+                        <img className='imgRedonda2' src={fotoProfe} alt="ramiro" />
                     </div>
                 </div>
 
                 <div className="chat2">
                     <div className="texto1">
                         <p>Hola,¿como estás?</p>
-                        <p>Soy Susana,</p>
-                        <p>encantada</p>
+                        <p>Soy {nombreProfe},</p>
+                        <p>un placer</p>
                     </div>
                 </div>
             </div>

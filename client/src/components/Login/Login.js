@@ -53,7 +53,7 @@ const Login = () => {
                 <form className="formulario_login">
                     <label htmlFor="" id="label_login_telefono">Teléfono</label>
                     <input type={"telefono"} id="input_login_telefono" name="telefono" placeholder="" onChange={(e) => { setTelefono(e.target.value) }} />
-            </div>
+                    
                     <label htmlFor="" id="label_login_password">Password</label>
                     <input type={"password"} id="input_login_password" name="password" placeholder="" onChange={(e) => { setPassword(e.target.value) }} />
 

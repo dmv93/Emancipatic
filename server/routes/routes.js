@@ -13,6 +13,9 @@ router.post("/nombreFormador", user.nombreFormador);
 router.post("/asignaturasFormador", user.asignaturasFormador);
 router.post("/valoracionFormador", user.valoracionFormador);
 router.post("/asignaturasValoracion", user.asignaturasValoracion);
+router.post("/informacionProfesor", user.informacionProfesor);
+router.post("/tusAlumnos", user.tusAlumnos);
+router.post("/asignaturasAlumno", user.asignaturasAlumno);
 
 
 module.exports = router;

@@ -1,7 +1,8 @@
 import React, { useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 
-import ramiro from '../../assets/ramiro.png'
+// import ramiro from '../../assets/ramiro.png'
+
 import whatsApp from '../../assets/whatsApp.png'
 import instagram1 from '../../assets/instagram1.png'
 import twitter1 from '../../assets/twitter1.png'
@@ -9,7 +10,11 @@ import facebook1 from '../../assets/facebook1.png'
 import youtube1 from '../../assets/youtube1.png'
 import googleMeet1 from '../../assets/googleMeet.png'
 import tick from '../../assets/tick.png'
+import jessica from '../../assets/jessica.webp'
+import sabervivir from '../../assets/sabervivir.jpg'
+import ian from '../../assets/ian.webp'
 import Navbar from "../Navbar";
+
 
 
 function PerfilProfesor() {
@@ -21,6 +26,7 @@ function PerfilProfesor() {
     const [imagenes5, setImagenes5] = useState(youtube1)
     const [imagenes6, setImagenes6] = useState(googleMeet1)
     const [profesor, setProfesor] = useState("");
+    const [fotoProfesor, setFotoProfesor] = useState("")
     const [telefonoProfesor, setTelefonoProfesor] = useState("");
 
 
@@ -44,6 +50,8 @@ function PerfilProfesor() {
 
     const [rrss, setRRSS] = useState("");
 
+    const navigate = useNavigate()
+
 
     useEffect(() => {
     
@@ -53,14 +61,23 @@ function PerfilProfesor() {
             body: JSON.stringify({ telefono: JSON.parse(localStorage.getItem('userFormador')) })
         }
 
-        fetch("nombreFormador", requestOptions)
+        fetch("informacionProfesor", requestOptions)
             .then((respone) => respone.json())
             .then((res) => {
                 setProfesor(res.data)
             })
+            .then(() => {
+                if (profesor == "Gustavo") {
+                    setFotoProfesor(ian)
+                } else if (profesor == "Jessica") {
+                    setFotoProfesor(jessica)
+                } else if (profesor == "Sergio") {
+                    setFotoProfesor(sabervivir)
+                }
+            })
 
-    }, [])
-    console.log(telefonoProfesor)
+    },)
+    // console.log(telefonoProfesor)
 
     const img1 = () => {
         if (cls1 == "img_src") {
@@ -142,19 +159,21 @@ function PerfilProfesor() {
         fetch("asignaturasFormador", requestOptions)
             .then((response) => response.json())
             .then((res) => {
-
+                if (res.message) {
+                    navigate("/tusalumnos")
+                }
             })
     }
 
 
     return(
         <div>
-                <Navbar />
+                <Navbar color="transparent" border="transparent"/>
                 <div className="contenedor1">
                     <div className="img_perfil">
-                        <img className='imgRedonda' src={ramiro} alt="ramiro" />
+                        <img className='imgRedonda' src={fotoProfesor} alt="ramiro" />
                     </div>
-                    <h3 id="perfil">Bienvenido, Ramiro {profesor}</h3>
+                    <h3 id="perfil">Bienvenido, {profesor}</h3>
                 </div>
                 <div className="categorias">
                     <h1 id="categorias_h1">Selecciona tus categorías</h1>
@@ -179,7 +198,9 @@ function PerfilProfesor() {
                         <img className={cls6} src={imagenes6} alt="googleMeet" onChange={(e) => setGoogleMeet(e.target.value)} onClick={() => img6()} />
                     </div>
                 </div>
-                <input type={"button"} className="boton_pe" onClick={() => sendAsignaturasF()} value="ENVIAR"/>
+                <div className="boton_perfil">
+                    <input type={"button"} className="boton_pe2" onClick={() => sendAsignaturasF()} value="ENVIAR"/>
+                </div>
         </div>
     )
 }
