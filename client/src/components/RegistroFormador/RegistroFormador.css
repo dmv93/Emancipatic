@@ -54,20 +54,15 @@ a {
 #input_rf_codpostal,
 #input_rf_provincia {
     box-sizing: border-box;
-
-
-
     border: 1px solid #B5B5B5;
     filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.25));
     border-radius: 5px;
-
     font-family: 'Baloo Paaji';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: x-large;
     line-height: 26px;
     letter-spacing: 0.04em;
-
     color: #1F3262;
 }
 
@@ -211,13 +206,11 @@ a {
     font-family: 'Baloo Paaji 2';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: x-large;
     line-height: 26px;
     height: 50px;
-
     letter-spacing: 0.04em;
     width: 100%;
-
     color: #FFFFFF;
 }
 
@@ -228,7 +221,7 @@ a {
     font-family: 'Baloo Paaji 2';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: x-large;
     line-height: 26px;
     letter-spacing: 0.04em;
     height: 50px;

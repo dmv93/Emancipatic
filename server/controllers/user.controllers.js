@@ -237,6 +237,26 @@ const user = {
         })
     },
 
+    informacionProfesor: (req, res) => {
+        MongoClient.connect(url, async function (err, db) {
+            if (err) throw err
+            var dbo = db.db(mydb);
+
+            const myobj = { telefono: (req.body.telefono).toString() }
+            dbo.collection("Formadores").findOne(myobj, async function (err, result) {
+                if (err) throw err
+                console.log(result)
+
+                if (result != null) {
+                    res.json({
+                        data: result.nombre,
+                        message: true
+                    })
+                }
+            });
+        })
+    },
+
     interesAlumno: (req, res) => {
         console.log(req.body)
         MongoClient.connect(url, async function (err, db) {
@@ -298,7 +318,10 @@ const user = {
 
                 if (result1 != null) {
                     dbo.collection("Formadores").updateOne({telefono: result1.telefono}, {$set:{asignaturas: [req.body.red1,req.body.red2,req.body.red3,req.body.red4,req.body.red5,req.body.red6]}}, async function (err, result2) {
-                        if (err) throw err                        
+                        if (err) throw err   
+                        res.json({
+                            message: true
+                        })                     
                         console.log(result2)
                     });
                     // res.json({
@@ -340,6 +363,47 @@ const user = {
             console.log(myobj)
 
             dbo.collection("Formadores").findOne(myobj, async function (err, result1) {
+                if (err) throw err
+                console.log(result1)
+
+                if (result1 != null) {
+                    res.json({
+                        data: result1
+                    })
+                }
+            });
+        }) 
+    },
+
+
+    tusAlumnos: (req, res) => {
+        MongoClient.connect(url, async function (err, db) {
+            console.log("HOLA")
+            if (err) throw err
+            var dbo = db.db(mydb);
+
+            dbo.collection("Alumnos").find({}).toArray(function (err, result) {
+                if (err) throw err;
+                console.log(result)
+                res.json({
+                    data: result
+                })
+
+                // db.close();
+            });
+        }) 
+    },
+
+    asignaturasAlumno: (req, res) => {
+        console.log(req.body)
+        MongoClient.connect(url, async function (err, db) {
+            if (err) throw err
+            var dbo = db.db(mydb);
+
+            const myobj = { nombre: req.body.nombre }
+            console.log(myobj)
+
+            dbo.collection("Alumnos").findOne(myobj, async function (err, result1) {
                 if (err) throw err
                 console.log(result1)
 
